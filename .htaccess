@@ -1,0 +1,169 @@
+# Enable mod_rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+</IfModule>
+
+# Keep www or non-www (choose one and comment out the other)
+# Force www
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
+    RewriteCond %{HTTPS}s ^on(s)|
+    RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# GZIP Compression
+<IfModule mod_deflate.c>
+    # Compress HTML, CSS, JavaScript, Text, XML and fonts
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/vnd.js
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/x-perl
+    AddOutputFilterByType DEFLATE application/x-pointplus
+    AddOutputFilterByType DEFLATE application/x-protobuffer
+    AddOutputFilterByType DEFLATE application/x-python
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/richtext
+    AddOutputFilterByType DEFLATE text/sgml
+    AddOutputFilterByType DEFLATE text/tab-separated-values
+    AddOutputFilterByType DEFLATE text/x-asm
+    AddOutputFilterByType DEFLATE text/x-c
+    AddOutputFilterByType DEFLATE text/x-component
+    AddOutputFilterByType DEFLATE text/x-crossdomain-xml
+    AddOutputFilterByType DEFLATE text/x-fortran
+    AddOutputFilterByType DEFLATE text/x-include-source
+    AddOutputFilterByType DEFLATE text/x-java-source
+    AddOutputFilterByType DEFLATE text/x-javascript
+    AddOutputFilterByType DEFLATE text/x-pascal
+    AddOutputFilterByType DEFLATE text/x-vb
+    AddOutputFilterByType DEFLATE text/x-vcalendar
+    AddOutputFilterByType DEFLATE text/x-vcard
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/xmedia-asf
+    AddOutputFilterByType DEFLATE text/xmediaxml
+    AddOutputFilterByType DEFLATE text/xmediaxml+oembed
+    AddOutputFilterByType DEFLATE text/x-python
+    AddOutputFilterByType DEFLATE text/x-sgml
+    AddOutputFilterByType DEFLATE text/x-shellscript
+    AddOutputFilterByType DEFLATE text/x-tcl
+    AddOutputFilterByType DEFLATE text/x-vcalendar
+    AddOutputFilterByType DEFLATE text/x-vcard
+    AddOutputFilterByType DEFLATE text/x-vnd.graphviz
+    AddOutputFilterByType DEFLATE text/x-xmessageheader
+    AddOutputFilterByType DEFLATE text/x-yaml
+    AddOutputFilterByType DEFLATE text/yaml
+</IfModule>
+
+# Browser Caching - Cache images, CSS, JavaScript, and other static files
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/x-windows-icon "access plus 1 year"
+
+    # CSS
+    ExpiresByType text/css "access plus 1 month"
+
+    # JavaScript
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+
+    # Fonts
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/eot "access plus 1 year"
+    ExpiresByType application/x-font-ttf "access plus 1 year"
+    ExpiresByType application/x-font-opentype "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+
+    # Default
+    ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# Cache Control Headers
+<IfModule mod_headers.c>
+    # Images
+    <FilesMatch "\\.(jpg|jpeg|png|gif|ico|svg|webp)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # CSS
+    <FilesMatch "\\.css$">
+        Header set Cache-Control "public, max-age=2592000, must-revalidate"
+    </FilesMatch>
+
+    # JS
+    <FilesMatch "\\.js$">
+        Header set Cache-Control "public, max-age=2592000, must-revalidate"
+    </FilesMatch>
+
+    # HTML
+    <FilesMatch "\\.html?$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+
+    # Fonts
+    <FilesMatch "\\.(woff|woff2|ttf|otf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Manifest
+    <FilesMatch "\\.webmanifest$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+</IfModule>
+
+# Remove ETags
+<IfModule mod_headers.c>
+    Header unset ETag
+    FileETag None
+</IfModule>
+
+# Prevent access to hidden files and directories
+<FilesMatch "^\\.|^\\.htaccess|^\\.env|^\\.git">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Set proper MIME types
+<IfModule mod_mime.c>
+    AddType application/json json
+    AddType application/manifest+json webmanifest
+    AddType image/svg+xml svg svgz
+    AddEncoding gzip svgz
+    AddType image/webp webp
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Prevent clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Enable XSS protection
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Referrer Policy
+    Header always set Referrer-Policy "no-referrer-when-downgrade"
+
+    # Permissions Policy
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>

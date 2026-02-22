@@ -5,25 +5,44 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title> Shahul Hameed</title>
-    <meta name="description" content="Personal and Professional Website of Shahul Hameed">
+    <title>Shahul Hameed - Digital Technology & Systems Lead</title>
+    <meta name="description" content="Digital Technology & Systems Lead specializing in IT infrastructure, system optimization, and workflow automation. Based in UAE.">
     <meta name="author" content="Shahul Hameed">
-
+    <meta name="keywords" content="IT Infrastructure, Systems Lead, Digital Technology, Operations Management, System Optimization">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Shahul Hameed - Digital Technology & Systems Lead">
+    <meta property="og:description" content="Digital Technology & Systems Lead specializing in IT infrastructure and system optimization.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shahul Hameed - Digital Technology & Systems Lead">
+    <meta name="theme-color" content="#000000">
+    
     <!-- mobile specific metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/vendor.css" media="all">
+    <link rel="stylesheet" href="css/styles.css" media="all">
 
     <!-- favicons
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Performance & SEO
+    ================================================== -->
+    <link rel="canonical" href="https://shahulhameed.com/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preload" as="image" href="images/about-photo.jpg">
 
 </head>
 
@@ -53,21 +72,21 @@
 
         <!-- ## site header 
         ================================================== -->
-        <header class="s-header">
+        <header class="s-header" role="banner" aria-label="Main Navigation">
 
             <div class="header-mobile">
-                <span class="mobile-home-link"><a href="index.html">Shahul Hameed</a></span>
-                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+                <span class="mobile-home-link"><a href="index.html" aria-label="Shahul Hameed Home">Shahul Hameed</a></span>
+                <a class="mobile-menu-toggle" href="#0" aria-label="Toggle Mobile Menu"><span>Menu</span></a>
             </div>
 
             <div class="row wide main-nav-wrap">
-                <nav class="column lg-12 main-nav">
+                <nav class="column lg-12 main-nav" aria-label="Main Navigation Menu">
                     <ul>
-                        <li><a href="index.html" class="home-link">Hameed</a></li>
-                        <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
-                        <li><a href="#about" class="smoothscroll">About</a></li>
-                        <li><a href="#Projects" class="smoothscroll">Projects</a></li>
-                        <li><a href="#contact" class="smoothscroll">Contact</a></li>
+                        <li><a href="index.html" class="home-link" aria-label="Home">Hameed</a></li>
+                        <li class="current"><a href="#intro" class="smoothscroll" aria-label="Intro">Intro</a></li>
+                        <li><a href="#about" class="smoothscroll" aria-label="About">About</a></li>
+                        <li><a href="#works" class="smoothscroll" aria-label="Projects">Projects</a></li>
+                        <li><a href="#contact" class="smoothscroll" aria-label="Contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -82,19 +101,19 @@
 
             <!-- ### intro
             ================================================== -->
-            <section id="intro" class="s-intro target-section">
+            <section id="intro" class="s-intro target-section" role="banner" aria-label="Hero Section">
 
                 <div class="row intro-content wide">
 
                     <div class="column">
                         <div class="text-pretitle with-line">
-                            Hello World
+                            Digital Systems. Structured Execution. Measurable Impact.
                         </div>
 
                         <h1 class="text-medium-title">
                             I'm Shahul Hameed, <br>
-                            a skilled Data Analyst & Developer  <br>
-                            focused on delivering innovative solutions to complex challenges.
+                            a Digital Technology & Systems Lead <br>
+                            specializing in IT infrastructure, system optimization, and automation-driven operational improvement.
                         </h1>
                     </div>
 
@@ -106,8 +125,8 @@
 
                 </div> <!-- end intro content -->
 
-                <a href="#about" class="intro-scrolldown smoothscroll">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+                <a href="#about" class="intro-scrolldown smoothscroll" aria-label="Scroll down to About section">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" aria-hidden="true"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
                 </a>
 
             </section> <!-- end s-intro -->
@@ -115,14 +134,18 @@
 
             <!-- ### about
             ================================================== -->
-            <section id="about" class="s-about target-section">
+            <section id="about" class="s-about target-section" role="region" aria-label="About and Experience Section">
 
 
                 <div class="row about-info wide" data-animate-block>
 
                     <div class="column lg-6 md-12 about-info__pic-block">
                         <img src="images/about-photo.jpg" 
-                             srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" alt="Shahul Hameed" class="about-info__pic" data-animate-el>
+                             srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" 
+                             alt="Shahul Hameed - Digital Technology and Systems Lead" 
+                             class="about-info__pic" 
+                             data-animate-el
+                             loading="lazy">
                     </div>
 
                     <div class="column lg-6 md-12">
@@ -132,7 +155,7 @@
                                 About
                             </h2>
                             <p class="attention-getter" data-animate-el>
-                                I am passionate about leveraging IT, AI, and Data Science to create impactful solutions. With expertise in IT support, data analysis, machine learning, and Python development, I focus on using data to solve challenges, optimize processes, and drive informed decision-making. My journey includes hands-on experience in real-world projects, internships, and continuous learning to stay ahead of emerging technologies and make a meaningful impact in the industry.</p>
+                                I am a Digital Technology & Systems Lead with a strong foundation in Computer Science and Systems & Operations Management. My work focuses on strengthening IT infrastructure, improving system reliability, and optimizing digital workflows in operations-driven environments. I specialize in IT infrastructure management, system optimization, workflow improvement, and technical troubleshooting. Currently based in the UAE, I am building advanced expertise in digital systems while progressing toward AI and Cloud-focused technologies.</p>
                             <a href="https://docs.google.com/document/d/1xOL1WrgFP9xhUlVOq8W5zmbuxWSfn3Prv9ss4IvNDD4/edit?usp=sharing" class="btn btn--medium u-fullwidth" data-animate-el>Download CV/Resume</a>
                         </div>
                     </div>
@@ -145,13 +168,13 @@
                         <h2 class="text-pretitle" data-animate-el>Expertise</h2>
 
                         <ul class="skills-list h1" data-animate-el>
-                            <li>Data Analysis & Visualization</li>
-                            <li>AI & Machine Learning</li>
-                            <li>Python Development</li>
-                            <li>IT Support & Troubleshooting</li>
-                            <li>Process Optimization</li>
-                            <li>Strategic Planning</li>
-                            <li>Cross-functional Collaboration</li>
+                            <li>IT Infrastructure & End-User Support</li>
+                            <li>System Optimization & Performance Monitoring</li>
+                            <li>Process Automation & Workflow Improvement</li>
+                            <li>Python-Based Automation</li>
+                            <li>Technical Troubleshooting</li>
+                            <li>Data Reporting & Analysis</li>
+                            <li>Digital Systems Coordination</li>
                         </ul>
 
                     </div>
@@ -171,12 +194,50 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
+                                    <h4 class="timeline__title">SMART INFINITECH SOLUTIONS FZ-LLC (UAE)</h4>
+                                    <h5 class="timeline__meta">Digital Technology & Systems Lead</h5>
+                                    <p class="timeline__timeframe">November 2025 - Present</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Leading digital systems and IT infrastructure operations, supporting troubleshooting, system monitoring, workflow optimization, and automation initiatives.</p>
+                                <p></p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">GMG (Trilogi Logistics)</h4>
+                                    <h5 class="timeline__meta">Warehouse Operations Team Leader</h5>
+                                    <p class="timeline__timeframe">March 2025 - September 2025</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Supervised operational workflows, supported system coordination, and contributed to process efficiency improvements.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Shell</h4>
+                                    <h5 class="timeline__meta">Intern, AI & Green Technology</h5>
+                                    <p class="timeline__timeframe">December 2024 - January 2025</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Supported AI-based modeling initiatives focused on sustainability solutions.</p>
+                                <p></p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
                                     <h4 class="timeline__title">Vodafone Idea Foundation</h4>
                                     <h5 class="timeline__meta">Data Analytics Intern</h5>
                                     <p class="timeline__timeframe">October 2024 - November 2024</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Collaborated on AI-driven data analytics projects to enhance decision-making and community impact. Utilized Python and advanced AI models for improved data processing.</p>
+                                    <p>Contributed to structured analytics projects and AI-assisted reporting improvements.</p>
                                 <p></p>
                                 </div>
                             </div>
@@ -189,7 +250,7 @@
                                     <p class="timeline__timeframe">February 2024 - May 2024</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Designed website pages using low-code tools and conducted marketing research to support strategic initiatives.</p>
+                                    <p>Supported digital development initiatives and system implementation.</p>
                                 </div>
                             </div>
 
@@ -198,10 +259,10 @@
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Code Alpha</h4>
                                     <h5 class="timeline__meta">Python Intern</h5>
-                                    <p class="timeline__timeframe">Sep 2023 - Oct 2023</p>
+                                    <p class="timeline__timeframe">September 2023 - October 2023</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Developed a Password Generator tool, improving security and efficiency.</p>
+                                    <p>Developed automation scripts and productivity tools.</p>
                                 <p></p>
                                 </div>
                             </div>
@@ -210,11 +271,11 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Oasis Infobyte</h4>
-                                    <h5 class="timeline__meta">Data Science Intern </h5>
-                                    <p class="timeline__timeframe">Jul 2023 - Aug 2023</p>
+                                    <h5 class="timeline__meta">Data Science Intern</h5>
+                                    <p class="timeline__timeframe">July 2023 - August 2023</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Built an Iris Flower Classification model and improved prediction accuracy.</p>
+                                    <p>Built predictive models and structured analytical solutions.</p>
                                 <p></p>
                                 </div>
                             </div>
@@ -224,10 +285,10 @@
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">Nandha InfoTech</h4>
                                     <h5 class="timeline__meta">Project Intern</h5>
-                                    <p class="timeline__timeframe">Jan 2023 </p>
+                                    <p class="timeline__timeframe">January 2023</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p> Developed disease detection models with high accuracy.</p>
+                                    <p>Assisted in technical project development and implementation.</p>
                                 <p></p>
                                 </div>
                             </div>
@@ -246,13 +307,12 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Sathyabama Institute of Science & Technology, Chennai</h3>
-                                    <h5 class="timeline__meta">Master of Business Administration (MBA), Systems and Operations Management</h5>
-                                    <p class="timeline__timeframe">August 2023 – Present</p>
+                                    <h4 class="timeline__title">Sathyabama Institute of Science & Technology</h4>
+                                    <h5 class="timeline__meta">MBA — Systems & Operations Management</h5>
+                                    <p class="timeline__timeframe">August 2023 – July 2025</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Grade: A+, CGPA: 8.31/10.00</p>
-                                    <p>Relevant Coursework: Operations Management, Data Analytics, Project Management, Software Project Management.</p>
+                                    <p>CGPA: 8.31/10</p>
                                 </div>
                             </div>
     
@@ -260,12 +320,11 @@
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
                                     <h4 class="timeline__title">RDB College of Arts & Science, affiliated with Bharathidasan University</h4>
-                                    <h5 class="timeline__meta">Bachelor of Science (BS), Computer Science</h5>
+                                    <h5 class="timeline__meta">BSc — Computer Science</h5>
                                     <p class="timeline__timeframe">July 2020 – June 2023</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Grade: A+, CGPA: 8.2/10.00</p>
-                                    <p>Relevant Coursework: Software Engineering, Operating Systems, Algorithms, Data Structures, Database Programming.</p>
+                                    <p>CGPA: 8.2/10</p>
                                 </div>
                             </div>
     
@@ -280,7 +339,7 @@
 
             <!-- ### Projects
             ================================================== -->
-            <section id="works" class="s-works target-section">
+            <section id="works" class="s-works target-section" role="region" aria-label="Portfolio Projects Section">
                 <div class="row works-portfolio">
                     <div class="column lg-12" data-animate-block>
                         <h2 class="text-pretitle" data-animate-el>
@@ -296,7 +355,8 @@
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-01">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/your_project_1.jpg" srcset="images/portfolio/your_project_1.jpg 1x, images/portfolio/your_project_1@2x.jpg 2x" alt="">
+                                        <img src="images/portfolio/your_project_1.jpg" srcset="images/portfolio/your_project_1.jpg 1x, images/portfolio/your_project_1@2x.jpg 2x" alt="Opinion Spam Detection Project" loading="lazy">
+                                    </div>
                                     </div>
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
@@ -316,7 +376,7 @@
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-02">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/your_project_2.jpg" srcset="images/portfolio/your_project_2.jpg 1x, images/portfolio/your_project_2@2x.jpg 2x" alt="">
+                                        <img src="images/portfolio/your_project_2.jpg" srcset="images/portfolio/your_project_2.jpg 1x, images/portfolio/your_project_2@2x.jpg 2x" alt="Cotton Leaf Disease Detection Project" loading="lazy">
                                     </div>
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
@@ -336,7 +396,7 @@
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-03">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/your_project_3.jpg" srcset="images/portfolio/your_project_3.jpg 1x, images/portfolio/your_project_3@2x.jpg 2x" alt="">
+                                        <img src="images/portfolio/your_project_3.jpg" srcset="images/portfolio/your_project_3.jpg 1x, images/portfolio/your_project_3@2x.jpg 2x" alt="Factors Influencing Doctor Visits Project" loading="lazy">
                                     </div>
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
@@ -356,7 +416,7 @@
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-04">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/your_project_4.jpg" srcset="images/portfolio/your_project_4.jpg 1x, images/portfolio/your_project_4@2x.jpg 2x" alt="">
+                                        <img src="images/portfolio/your_project_4.jpg" srcset="images/portfolio/your_project_4.jpg 1x, images/portfolio/your_project_4@2x.jpg 2x" alt="Entrepreneur Startup Planning Project" loading="lazy">
                                     </div>
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
@@ -376,7 +436,7 @@
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-05">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/your_project_5.jpg" srcset="images/portfolio/your_project_5.jpg 1x, images/portfolio/your_project_5@2x.jpg 2x" alt="">
+                                        <img src="images/portfolio/your_project_5.jpg" srcset="images/portfolio/your_project_5.jpg 1x, images/portfolio/your_project_5@2x.jpg 2x" alt="Healthcare Analytics Project" loading="lazy">
                                     </div>
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
@@ -396,7 +456,7 @@
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-06">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/your_project_6.jpg" srcset="images/portfolio/your_project_6.jpg 1x, images/portfolio/your_project_6@2x.jpg 2x" alt="">
+                                        <img src="images/portfolio/your_project_6.jpg" srcset="images/portfolio/your_project_6.jpg 1x, images/portfolio/your_project_6@2x.jpg 2x" alt="CodeAlpha Password Generator Project" loading="lazy">
                                     </div>
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
@@ -422,11 +482,11 @@
     <div class="modal-popup">
         <img src="images/portfolio/gallery/g-cotton-disease.jpg" alt="Cotton Disease Detection">
         <div class="modal-popup__desc">
-            <h5>Cotton Leaf & Heart Disease Detection</h5>
-            <p>This project leverages AI to detect diseases in cotton leaves and early-stage heart conditions with 95% accuracy. Using TensorFlow and Python, the system automates disease detection and classification, providing practical solutions in agriculture and healthcare.</p>
+            <h5>Opinion Spam Detection</h5>
+            <p>Developed a machine learning-based spam detection system using NLP techniques to improve review classification accuracy.</p>
             <ul class="modal-popup__cat">
-                <li>AI & Machine Learning</li>
-                <li>Data Science</li>
+                <li>Data Analytics</li>
+                <li>Machine Learning</li>
             </ul>
         </div>
         <a href="https://github.com/Shahul16" class="modal-popup__details">Project link</a>
@@ -437,11 +497,11 @@
     <div class="modal-popup">
         <img src="images/portfolio/gallery/g-healthcare-analytics.jpg" alt="Healthcare Analytics">
         <div class="modal-popup__desc">
-            <h5>Healthcare Analytics Project</h5>
-            <p>This project explores healthcare data to analyze trends in healthcare access, patient behavior, and the effectiveness of policies, providing actionable insights to improve healthcare quality.</p>
+            <h5>Cotton Leaf Disease Detection</h5>
+            <p>Built an AI-based image classification model to detect crop diseases with high prediction accuracy.</p>
             <ul class="modal-popup__cat">
-                <li>Data Analytics</li>
-                <li>Healthcare Analysis</li>
+                <li>AI & Machine Learning</li>
+                <li>Data Science</li>
             </ul>
         </div>
         <a href="https://github.com/Shahul16/Healthcare_Analytics_Project" class="modal-popup__details">Project link</a>
@@ -452,10 +512,11 @@
     <div class="modal-popup">
         <img src="images/portfolio/gallery/g-password-generator.jpg" alt="Password Generator">
         <div class="modal-popup__desc">
-            <h5>CodeAlpha Password Generator</h5>
-            <p>A Python-based password generator that emphasizes security and efficiency. The tool helps reduce customer support issues and enhances security through its robust design.</p>
+            <h5>Factors Influencing Doctor Visits</h5>
+            <p>Analyzed healthcare datasets to identify demographic and behavioral patterns affecting medical visits.</p>
             <ul class="modal-popup__cat">
-                <li>Security & Development</li>
+                <li>Data Science</li>
+                <li>Statistical Analysis</li>
             </ul>
         </div>
         <a href="https://github.com/Shahul16/Password-Generator" class="modal-popup__details">Project link</a>
@@ -466,10 +527,10 @@
     <div class="modal-popup">
         <img src="images/portfolio/gallery/g-entrepreneurship.jpg" alt="Entrepreneurship Planning">
         <div class="modal-popup__desc">
-            <h5>Entrepreneur Startup Planning and Venture Creation</h5>
-            <p>Developed a comprehensive framework for startup planning, including market analysis, customer research, and financial projections, helping to improve project execution and MVP engagement.</p>
+            <h5>Entrepreneur Startup Planning</h5>
+            <p>Structured a comprehensive startup development framework including research, financial modeling, and strategic planning.</p>
             <ul class="modal-popup__cat">
-                <li>Project Management</li>
+                <li>Business Strategy</li>
                 <li>Entrepreneurship</li>
             </ul>
         </div>
@@ -481,11 +542,11 @@
     <div class="modal-popup">
         <img src="images/portfolio/gallery/g-factors-doctor-visits.jpg" alt="Doctor Visits Analysis">
         <div class="modal-popup__desc">
-            <h5>Factors Influencing Doctor Visits</h5>
-            <p>Analyzed various factors, such as income, gender, and health status, to understand the patterns of doctor visits. This project uncovers significant insights related to healthcare accessibility and disparity.</p>
+            <h5>Healthcare Analytics Project</h5>
+            <p>Designed analytical models to evaluate healthcare performance trends and reporting clarity.</p>
             <ul class="modal-popup__cat">
                 <li>Data Science</li>
-                <li>Statistical Analysis</li>
+                <li>Healthcare Analysis</li>
             </ul>
         </div>
                 <a href="https://github.com/Shahul16" class="modal-popup__details">Project link</a>
@@ -496,11 +557,10 @@
     <div class="modal-popup">
         <img src="images/portfolio/gallery/g-opinion-spam.jpg" alt="Opinion Spam Detection">
         <div class="modal-popup__desc">
-            <h5>Opinion Spam Detection</h5>
-            <p>Built a machine learning-based spam detection system for online platforms using Python, VB.NET, and C#, increasing detection accuracy by 25%. The project utilizes Twitter API for data collection and analysis.</p>
+            <h5>CodeAlpha Password Generator</h5>
+            <p>Developed a Python-based secure password generation tool to enhance credential security.</p>
             <ul class="modal-popup__cat">
-                <li>Machine Learning</li>
-                <li>Software Development</li>
+                <li>Security & Development</li>
             </ul>
         </div>
         <a href="https://github.com/Shahul16/Opinion-Spam-Detection" class="modal-popup__details">Project link</a>
@@ -560,7 +620,7 @@
 
             <!-- ### contact
     ================================================== -->
-<section id="contact" class="s-contact target-section">
+<section id="contact" class="s-contact target-section" role="region" aria-label="Contact Information Section">
 
     <div class="row contact-top">
         <div class="column lg-12">
@@ -569,29 +629,28 @@
             </h2>
 
             <p class="h1">
-                I would love to hear from you!
-                Whether you’re interested in collaboration or just
-                want to discuss tech, design, or AI—reach out to me below.
+                Open to opportunities in IT Support, Digital Systems, Technical Operations, and entry-level AI/Cloud roles within the UAE.
+                Feel free to connect for collaboration or professional discussions.
             </p>
         </div>
     </div> <!-- end contact-top -->
 
     <div class="row contact-bottom">
-        <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
+        <div class="column lg-5 md-5 tab-6 stack-on-550">
             <h3 class="text-pretitle">Reach me at</h3>
             <p class="contact-links">
                 <a href="mailto:shahulofficial16@gmail.com" class="mailtoui">shahulofficial16@gmail.com</a> <br>
                 <a href="tel:+919894918026 ">+91 98949 18026</a> | <a href="tel:+971551328449 ">+971 55 1 328449</a>
             </p>
         </div>
-        <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
+        <div class="column lg-4 md-5 tab-6 stack-on-550">
             <h3 class="text-pretitle">Social</h3>
             <ul class="contact-social">
                 <li><a href="https://linkedin.com/in/shahul16">linkedin</a></li>
                 <li><a href="https://github.com/Shahul16">Github</a></li>
             </ul>
         </div>
-        <div class="column lg-4 md-12 contact-block">
+        <div class="column lg-3 md-12 tab-12">
             <a href="mailto:shahulofficial16@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
         </div>
     </div> <!-- end contact-bottom -->
@@ -622,8 +681,8 @@
 </div> <!-- end -s-pagewrap -->
 
 <!-- Java Script ================================================== -->
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="js/plugins.js" defer></script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>
