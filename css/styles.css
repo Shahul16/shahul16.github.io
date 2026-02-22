@@ -4038,7 +4038,7 @@ img.u-pull-left {
  * ------------------------------------------------------------------- */
 
 .s-contact {
-    background : #fff;
+    background : var(--color-bg);
 }
 
 .contact-top {
