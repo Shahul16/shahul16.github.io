@@ -365,6 +365,100 @@
     }; // end ssMoveTo
 
 
+   /* Chatbot
+    * ------------------------------------------------------ */
+    const ssChatbot = function() {
+
+        const toggleButton = document.querySelector('#chatbot-toggle');
+        const panel = document.querySelector('#chatbot-panel');
+        const closeButton = document.querySelector('#chatbot-close');
+        const form = document.querySelector('#chatbot-form');
+        const input = document.querySelector('#chatbot-input');
+        const messages = document.querySelector('#chatbot-messages');
+
+        if (!(toggleButton && panel && closeButton && form && input && messages)) return;
+
+        let initialized = false;
+
+        const addMessage = function(text, sender) {
+            const bubble = document.createElement('div');
+            bubble.className = sender === 'user' ? 'chatbot__bubble chatbot__bubble--user' : 'chatbot__bubble chatbot__bubble--bot';
+            bubble.textContent = text;
+            messages.appendChild(bubble);
+            messages.scrollTop = messages.scrollHeight;
+        };
+
+        const botReply = function(message) {
+            const query = message.toLowerCase();
+
+            if (query.includes('contact') || query.includes('email') || query.includes('phone')) {
+                return 'You can reach Shahul via shahulofficial16@gmail.com or the Contact section at the bottom of this page.';
+            }
+
+            if (query.includes('project') || query.includes('portfolio') || query.includes('work')) {
+                return 'Check the Projects section to view highlighted AI, automation, cloud, and IT systems projects with links.';
+            }
+
+            if (query.includes('skill') || query.includes('expertise') || query.includes('tech')) {
+                return 'Core skills include AI/ML, Python automation, cloud infrastructure (AWS/GCP), ERP/CRM integration, and DevOps monitoring.';
+            }
+
+            if (query.includes('resume') || query.includes('cv')) {
+                return 'Use the Download CV/Resume button in the About section to open the latest resume.';
+            }
+
+            if (query.includes('location') || query.includes('based') || query.includes('dubai')) {
+                return 'Shahul is based in Dubai, UAE and open to UAE and remote opportunities.';
+            }
+
+            return 'I can help with contact info, skills, projects, CV, and location. Try asking one of those.';
+        };
+
+        const openPanel = function() {
+            panel.hidden = false;
+            toggleButton.setAttribute('aria-expanded', 'true');
+
+            if (!initialized) {
+                addMessage('Hi, I am Hameed Assistant. Ask me about skills, projects, CV, or contact details.', 'bot');
+                initialized = true;
+            }
+
+            window.setTimeout(function() {
+                input.focus();
+            }, 50);
+        };
+
+        const closePanel = function() {
+            panel.hidden = true;
+            toggleButton.setAttribute('aria-expanded', 'false');
+            toggleButton.focus();
+        };
+
+        toggleButton.addEventListener('click', function() {
+            if (panel.hidden) {
+                openPanel();
+            } else {
+                closePanel();
+            }
+        });
+
+        closeButton.addEventListener('click', closePanel);
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const userMessage = input.value.trim();
+            if (!userMessage) return;
+
+            addMessage(userMessage, 'user');
+            input.value = '';
+
+            window.setTimeout(function() {
+                addMessage(botReply(userMessage), 'bot');
+            }, 250);
+        });
+    }; // end ssChatbot
+
+
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
@@ -377,6 +471,7 @@
         ssLightbox();
         ssAlertBoxes();
         ssMoveTo();
+        ssChatbot();
 
     })();
 
