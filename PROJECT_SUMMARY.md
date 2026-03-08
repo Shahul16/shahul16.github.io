@@ -162,7 +162,6 @@ Choose one:
 - [x] Deployment guides ready
 
 ### ⏳ Pending (Your Action)
-- [ ] Add profile images (about-photo.jpg & about-photo@2x.jpg)
 - [ ] Test locally
 - [ ] Deploy to live server
 - [ ] Submit to search engines (optional)
@@ -185,8 +184,8 @@ shahul16.github.io/
 │   ├── main.js                         (Not modified)
 │   └── plugins.js                      (Not modified)
 ├── images/
-│   ├── about-photo.jpg                 (⏳ PENDING - Add your profile photo)
-│   ├── about-photo@2x.jpg              (⏳ PENDING - Add 2x variant)
+│   ├── about-photo.jpg                 (✅ Present)
+│   ├── about-photo@2x.jpg              (✅ Present)
 │   ├── avatars/                        (Existing)
 │   ├── icons/                          (Existing)
 │   └── portfolio/                      (Existing)
