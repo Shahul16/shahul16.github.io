@@ -4365,9 +4365,10 @@ img.u-pull-left {
 
 .chatbot {
     position: fixed;
-    right: 2rem;
-    bottom: 2rem;
+    right: 0;
+    bottom: 0;
     z-index: 1000;
+    padding: 1.2rem;
 }
 
 .chatbot__toggle {
@@ -4398,9 +4399,9 @@ img.u-pull-left {
 }
 
 .chatbot__panel {
-    width: min(34rem, calc(100vw - 3rem));
-    height: 46rem;
-    margin-top: 1rem;
+    width: min(36rem, calc(100vw - 2.4rem));
+    height: 48rem;
+    margin-top: 1.2rem;
     border: 1px solid var(--color-border);
     border-radius: 1rem;
     background: var(--color-gray-12);
@@ -4619,12 +4620,13 @@ img.u-pull-left {
 
 @media screen and (max-width: 600px) {
     .chatbot {
-        right: 1rem;
-        bottom: 1rem;
+        right: 0;
+        bottom: 0;
+        padding: .8rem;
     }
 
     .chatbot__panel {
-        width: calc(100vw - 2rem);
+        width: calc(100vw - 1.6rem);
         height: 44rem;
     }
 }

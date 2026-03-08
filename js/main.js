@@ -414,7 +414,7 @@
             }
         };
 
-        const botReply = function(message) {
+        const botReplyLocal = function(message) {
             const query = message.toLowerCase().trim();
             const replies = {
                 contact: [
@@ -455,7 +455,41 @@
                 return replies.location[messageCount % replies.location.length];
             }
 
-            return 'I can help with: skills, projects, contact info, CV, or location. What would you like to know?';
+            return null;
+        };
+
+        const botReplyAPI = async function(message, callback) {
+            try {
+                const localReply = botReplyLocal(message);
+                if (localReply) {
+                    callback(localReply);
+                    return;
+                }
+
+                const response = await fetch('https://api-inference.huggingface.co/models/deepset/roberta-base-squad2', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        inputs: {
+                            'question': message,
+                            'context': 'Shahul Hameed is an AI Engineer and IT Systems Specialist based in Dubai. He builds automation, cloud infrastructure, and AI systems.'
+                        }
+                    })
+                });
+
+                if (!response.ok) {
+                    callback('Thanks for asking! I found context about Shahul\'s work in AI and IT systems. Ask me about contact, skills, or projects for direct answers.');
+                    return;
+                }
+
+                const data = await response.json();
+                const reply = data.answer || 'Thanks for your interest! Feel free to ask about Shahul\'s skills, projects, or background.';
+                callback(reply);
+            } catch (error) {
+                callback('Connecting... Feel free to ask about contact info, projects, skills, or location.');
+            }
         };
 
         const openPanel = function() {
@@ -508,12 +542,12 @@
             input.disabled = true;
 
             const typing = showTyping();
-            window.setTimeout(function() {
+            botReplyAPI(userMessage, function(reply) {
                 removeTyping(typing);
-                addMessage(botReply(userMessage), 'bot');
+                addMessage(reply, 'bot');
                 input.disabled = false;
                 input.focus();
-            }, 300 + Math.random() * 200);
+            });
         });
     }; // end ssChatbot
 
