@@ -379,57 +379,105 @@
         if (!(toggleButton && panel && closeButton && form && input && messages)) return;
 
         let initialized = false;
+        let messageCount = 0;
+        const MAX_MESSAGES = 50;
 
         const addMessage = function(text, sender) {
+            if (messageCount >= MAX_MESSAGES) {
+                messages.removeChild(messages.firstChild);
+            }
             const bubble = document.createElement('div');
             bubble.className = sender === 'user' ? 'chatbot__bubble chatbot__bubble--user' : 'chatbot__bubble chatbot__bubble--bot';
             bubble.textContent = text;
+            bubble.setAttribute('role', 'article');
             messages.appendChild(bubble);
+            messageCount++;
+            window.setTimeout(function() {
+                bubble.classList.add('chatbot__bubble--visible');
+                messages.scrollTop = messages.scrollHeight;
+            }, 10);
+        };
+
+        const showTyping = function() {
+            const dots = document.createElement('div');
+            dots.className = 'chatbot__bubble chatbot__bubble--bot chatbot__typing';
+            dots.setAttribute('aria-label', 'Assistant is typing');
+            dots.innerHTML = '<span></span><span></span><span></span>';
+            messages.appendChild(dots);
             messages.scrollTop = messages.scrollHeight;
+            return dots;
+        };
+
+        const removeTyping = function(dots) {
+            if (dots && dots.parentNode) {
+                dots.parentNode.removeChild(dots);
+            }
         };
 
         const botReply = function(message) {
-            const query = message.toLowerCase();
+            const query = message.toLowerCase().trim();
+            const replies = {
+                contact: [
+                    'Reach Shahul at shahulofficial16@gmail.com or use the Contact section at the bottom of this page.',
+                    'Email: shahulofficial16@gmail.com. LinkedIn: linkedin.com/in/shahul16. GitHub: github.com/Shahul16.'
+                ],
+                projects: [
+                    'Check the Projects section for AI Helpdesk, Python Automation, Cloud Monitoring, ERP Analytics, and IT Ticket System projects.',
+                    'Featured projects showcase AI/ML, automation, cloud infrastructure, and IT operations expertise with GitHub links.'
+                ],
+                skills: [
+                    'Core expertise: AI/ML, Python automation, AWS/GCP cloud, ERP/CRM integration, DevOps, and IT systems administration.',
+                    'Specializes in building intelligent systems combining automation, infrastructure reliability, and AI capabilities.'
+                ],
+                resume: [
+                    'Download CV/Resume from the About section. Shows full career timeline, education, and technical achievements.',
+                    'Current role: IT Support Specialist at SMART INFINITECH. MBA in Systems & Operations Management.'
+                ],
+                location: [
+                    'Based in Dubai, UAE. Open to UAE opportunities and remote positions globally.',
+                    'Located in Dubai with focus on AI engineering, automation, and IT infrastructure projects.'
+                ]
+            };
 
             if (query.includes('contact') || query.includes('email') || query.includes('phone')) {
-                return 'You can reach Shahul via shahulofficial16@gmail.com or the Contact section at the bottom of this page.';
+                return replies.contact[messageCount % replies.contact.length];
             }
-
             if (query.includes('project') || query.includes('portfolio') || query.includes('work')) {
-                return 'Check the Projects section to view highlighted AI, automation, cloud, and IT systems projects with links.';
+                return replies.projects[messageCount % replies.projects.length];
             }
-
-            if (query.includes('skill') || query.includes('expertise') || query.includes('tech')) {
-                return 'Core skills include AI/ML, Python automation, cloud infrastructure (AWS/GCP), ERP/CRM integration, and DevOps monitoring.';
+            if (query.includes('skill') || query.includes('expertise') || query.includes('tech') || query.includes('experience')) {
+                return replies.skills[messageCount % replies.skills.length];
             }
-
             if (query.includes('resume') || query.includes('cv')) {
-                return 'Use the Download CV/Resume button in the About section to open the latest resume.';
+                return replies.resume[messageCount % replies.resume.length];
             }
-
             if (query.includes('location') || query.includes('based') || query.includes('dubai')) {
-                return 'Shahul is based in Dubai, UAE and open to UAE and remote opportunities.';
+                return replies.location[messageCount % replies.location.length];
             }
 
-            return 'I can help with contact info, skills, projects, CV, and location. Try asking one of those.';
+            return 'I can help with: skills, projects, contact info, CV, or location. What would you like to know?';
         };
 
         const openPanel = function() {
             panel.hidden = false;
+            panel.classList.add('chatbot__panel--open');
             toggleButton.setAttribute('aria-expanded', 'true');
 
             if (!initialized) {
-                addMessage('Hi, I am Hameed Assistant. Ask me about skills, projects, CV, or contact details.', 'bot');
+                addMessage('Hi! 👋 I\'m Hameed Assistant. Ask me about skills, projects, contact info, or CV.', 'bot');
                 initialized = true;
             }
 
             window.setTimeout(function() {
                 input.focus();
-            }, 50);
+            }, 100);
         };
 
         const closePanel = function() {
-            panel.hidden = true;
+            panel.classList.remove('chatbot__panel--open');
+            window.setTimeout(function() {
+                panel.hidden = true;
+            }, 200);
             toggleButton.setAttribute('aria-expanded', 'false');
             toggleButton.focus();
         };
@@ -444,17 +492,28 @@
 
         closeButton.addEventListener('click', closePanel);
 
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePanel();
+            }
+        });
+
         form.addEventListener('submit', function(event) {
             event.preventDefault();
             const userMessage = input.value.trim();
-            if (!userMessage) return;
+            if (!userMessage || input.disabled) return;
 
             addMessage(userMessage, 'user');
             input.value = '';
+            input.disabled = true;
 
+            const typing = showTyping();
             window.setTimeout(function() {
+                removeTyping(typing);
                 addMessage(botReply(userMessage), 'bot');
-            }, 250);
+                input.disabled = false;
+                input.focus();
+            }, 300 + Math.random() * 200);
         });
     }; // end ssChatbot
 
