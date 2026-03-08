@@ -13,7 +13,8 @@
 
    /* Animations
     * -------------------------------------------------- */
-    const tl = anime.timeline( {
+    const hasAnime = typeof anime !== 'undefined';
+    const tl = hasAnime ? anime.timeline( {
         easing: 'easeInOutCubic',
         duration: 800,
         autoplay: false
@@ -40,7 +41,7 @@
         opacity: [0, 1]
     }, '-=200')
     .add({
-        targets: [ '.s-intro .text-pretitle', '.s-intro .text-huge-title'],
+        targets: [ '.s-intro .text-pretitle', '.s-intro .text-medium-title'],
         translateX: [100, 0],
         opacity: [0, 1],
         delay: anime.stagger(400)
@@ -63,7 +64,15 @@
         targets: '.intro-scrolldown',
         translateY: [100, 0],
         opacity: [0, 1]
-    }, '-=800');
+    }, '-=800') : {
+        play: function() {
+            const preloader = document.querySelector('#preloader');
+            if (preloader) {
+                preloader.style.visibility = 'hidden';
+                preloader.style.display = 'none';
+            }
+        }
+    };
 
 
 
@@ -159,10 +168,13 @@
                 * sectionId variable we are getting while looping through sections as 
                 * an selector
                 */
+                const navLink = document.querySelector('.main-nav a[href*="' + sectionId + '"]');
+                if (!navLink || !navLink.parentNode) return;
+
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelector(".main-nav a[href*=" + sectionId + "]").parentNode.classList.add("current");
+                    navLink.parentNode.classList.add("current");
                 } else {
-                    document.querySelector(".main-nav a[href*=" + sectionId + "]").parentNode.classList.remove("current");
+                    navLink.parentNode.classList.remove("current");
                 }
             });
         }
@@ -191,7 +203,7 @@
                 const inView = scrollY > triggerTop && scrollY <= blockSpace;
                 const isAnimated = current.classList.contains("ss-animated");
 
-                if (inView && (!isAnimated)) {
+                if (inView && (!isAnimated) && hasAnime) {
                     anime({
                         targets: current.querySelectorAll("[data-animate-el]"),
                         opacity: [0, 1],
@@ -213,6 +225,9 @@
    /* Swiper
     * ------------------------------------------------------ */ 
     const ssSwiper = function() {
+
+        const swiperContainer = document.querySelector('.swiper-container');
+        if (!(swiperContainer && typeof Swiper !== 'undefined')) return;
 
         const mySwiper = new Swiper('.swiper-container', {
 
@@ -248,12 +263,15 @@
     const ssLightbox = function() {
 
         const folioLinks = document.querySelectorAll('.folio-list__item-link');
+        if (!(folioLinks.length && typeof basicLightbox !== 'undefined')) return;
         const modals = [];
 
         folioLinks.forEach(function(link) {
             let modalbox = link.getAttribute('href');
+            const modalElement = document.querySelector(modalbox);
+            if (!modalElement) return;
             let instance = basicLightbox.create(
-                document.querySelector(modalbox),
+                modalElement,
                 {
                     onShow: function(instance) {
                         //detect Escape key press
@@ -331,6 +349,7 @@
         }
 
         const triggers = document.querySelectorAll('.smoothscroll');
+        if (typeof MoveTo === 'undefined') return;
         
         const moveTo = new MoveTo({
             tolerance: 0,
