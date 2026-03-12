@@ -1,6 +1,6 @@
 # Shahul Hameed Portfolio Website
 
-Production-ready personal portfolio website for Shahul Hameed, focused on AI engineering, automation, cloud infrastructure, and IT systems delivery.
+Production-ready personal portfolio website for Shahul Hameed, positioned for Technology Business Analyst and digital transformation opportunities.
 
 ## Live Website
 
@@ -13,6 +13,7 @@ Production-ready personal portfolio website for Shahul Hameed, focused on AI eng
 - CSS3
 - Vanilla JavaScript
 - Static hosting on GitHub Pages
+- Optional Next.js version in `next-portfolio/`
 
 ## Project Structure
 
@@ -24,6 +25,13 @@ Production-ready personal portfolio website for Shahul Hameed, focused on AI eng
 - `images/` - portfolio/media assets
 - `robots.txt`, `sitemap.xml`, `site.webmanifest` - SEO/PWA metadata
 - `CNAME` - custom domain mapping for GitHub Pages
+- `PROJECT_GUIDE.md` - single operational project reference
+
+## Positioning
+
+- Title: Technology Business Analyst
+- Focus: systems improvement, analytics visibility, and practical automation
+- Audience: recruiters and hiring managers for analyst/transformation roles
 
 ## Local Development
 
@@ -42,6 +50,8 @@ This repository is configured for GitHub Pages user-site deployment (`main` bran
 1. Push changes to `main`
 2. Verify GitHub Pages build in repository settings
 3. Confirm domain and HTTPS in Pages settings
+
+Additional implementation and maintenance details are in `PROJECT_GUIDE.md`.
 
 ## Quality Standards
 

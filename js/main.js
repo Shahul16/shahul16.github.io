@@ -422,20 +422,20 @@
                     'Email: shahulofficial16@gmail.com. LinkedIn: linkedin.com/in/shahul16. GitHub: github.com/Shahul16.'
                 ],
                 projects: [
-                    'Check the Projects section for AI Helpdesk, Python Automation, Cloud Monitoring, ERP Analytics, and IT Ticket System projects.',
-                    'Featured projects showcase AI/ML, automation, cloud infrastructure, and IT operations expertise with GitHub links.'
+                    'Check the Projects section for AI Helpdesk, Python Automation, Cloud Monitoring, ERP Analytics, and IT Ticket Workflow case studies.',
+                    'Featured projects showcase systems improvement, automation, data visibility, and IT operations outcomes.'
                 ],
                 skills: [
-                    'Core expertise: AI/ML, Python automation, AWS/GCP cloud, ERP/CRM integration, DevOps, and IT systems administration.',
-                    'Specializes in building intelligent systems combining automation, infrastructure reliability, and AI capabilities.'
+                    'Core expertise: business analysis, IT infrastructure, ERP/WMS workflows, data analytics, and Python automation.',
+                    'Focus area: improving operations through systems, process design, reporting, and automation.'
                 ],
                 resume: [
                     'Download CV/Resume from the About section. Shows full career timeline, education, and technical achievements.',
-                    'Current role: IT Support Specialist at SMART INFINITECH. MBA in Systems & Operations Management.'
+                    'Current role: IT Infrastructure & Systems Engineer at SMART INFINITECH. MBA in Systems & Operations Management.'
                 ],
                 location: [
                     'Based in Dubai, UAE. Open to UAE opportunities and remote positions globally.',
-                    'Located in Dubai with focus on AI engineering, automation, and IT infrastructure projects.'
+                    'Located in Dubai with focus on business analysis, systems improvement, automation, and IT infrastructure operations.'
                 ]
             };
 
@@ -474,13 +474,13 @@
                     body: JSON.stringify({
                         inputs: {
                             'question': message,
-                            'context': 'Shahul Hameed is an AI Engineer and IT Systems Specialist based in Dubai. He builds automation, cloud infrastructure, and AI systems.'
+                            'context': 'Shahul Hameed is a Technology Business Analyst based in the UAE with experience in IT infrastructure, ERP/WMS operations, analytics, and automation.'
                         }
                     })
                 });
 
                 if (!response.ok) {
-                    callback('Thanks for asking! I found context about Shahul\'s work in AI and IT systems. Ask me about contact, skills, or projects for direct answers.');
+                    callback('Thanks for asking. I found context about Shahul\'s work in systems, analytics, and operations improvement. Ask me about contact, skills, or projects for direct answers.');
                     return;
                 }
 
@@ -498,7 +498,7 @@
             toggleButton.setAttribute('aria-expanded', 'true');
 
             if (!initialized) {
-                addMessage('Hi! 👋 I\'m Hameed Assistant. Ask me about skills, projects, contact info, or CV.', 'bot');
+                addMessage('Hi! I\'m Hameed Assistant. Ask me about skills, projects, contact info, or CV.', 'bot');
                 initialized = true;
             }
 
