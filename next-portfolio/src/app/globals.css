@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0e1218;
+  --foreground: #e7edf5;
+  --surface: #141b24;
+  --surface-soft: #1b2531;
+  --accent: #5bc0be;
+  --accent-2: #f4a261;
+  --muted: #9fb0c4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-source-serif);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+.brand-title {
+  font-family: var(--font-source-serif), serif;
+}
+
+.site-shell {
+  background-image:
+    radial-gradient(circle at 18% 8%, rgba(91, 192, 190, 0.16), transparent 40%),
+    radial-gradient(circle at 82% 16%, rgba(244, 162, 97, 0.15), transparent 38%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 36%);
+}
+
+.card {
+  background: color-mix(in oklab, var(--surface) 85%, black 15%);
+  border: 1px solid color-mix(in oklab, var(--muted) 35%, transparent 65%);
+}
+
+.soft-card {
+  background: color-mix(in oklab, var(--surface-soft) 88%, black 12%);
+  border: 1px solid color-mix(in oklab, var(--muted) 30%, transparent 70%);
+}
+
+.chip {
+  background: color-mix(in oklab, var(--surface-soft) 90%, black 10%);
+  border: 1px solid color-mix(in oklab, var(--muted) 32%, transparent 68%);
+}

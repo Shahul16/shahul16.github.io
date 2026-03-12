@@ -1,0 +1,61 @@
+Shahul Hameed
+United Arab Emirates
+Email: shahulofficial16@gmail.com
+Phone: +971 58 9922 059
+LinkedIn: https://linkedin.com/in/shahul16
+GitHub: https://github.com/Shahul16
+
+PROFESSIONAL SUMMARY
+Technology Business Analyst with an IT infrastructure and systems operations background.
+Experienced in ERP/WMS operations, Microsoft 365 and Active Directory administration,
+reporting automation, and cross-functional process improvement.
+Focused on digital transformation, service reliability, and operational efficiency.
+
+TARGET ROLES
+- Technology Analyst
+- Business Analyst
+- Digital Transformation Analyst
+
+CORE SKILLS
+- Business analysis and requirement translation
+- IT systems support and infrastructure coordination
+- ERP/WMS process operations
+- Data analytics and KPI reporting
+- Process mapping and workflow optimization
+- Python automation for recurring operational tasks
+
+TECHNICAL STACK
+- Systems: Windows, Linux, Active Directory, Microsoft 365
+- Data: Excel, SQL, Power BI
+- Automation: Python
+- Platforms: ERP/WMS workflows, SAP process exposure
+- Cloud: AWS and Google Cloud fundamentals
+
+PROFESSIONAL EXPERIENCE
+SMART INFINITECH SOLUTIONS (UAE)
+IT Infrastructure & Systems Engineer | 2025 - Present
+- Managed cross-functional support across infrastructure and business operations.
+- Improved service stability and supported ERP/CRM usage.
+- Introduced report automation to reduce repetitive manual tasks.
+- Collaborated with operations teams to standardize recurring issue handling.
+
+GMG (Trilogi Logistics), Dubai
+Warehouse Tech & Operations Team Lead | 2025
+- Led warehouse technology support and device workflow operations.
+- Improved asset visibility and reduced recurring downtime incidents.
+- Supported frontline productivity through stronger onboarding and support processes.
+
+Shell
+Intern, AI & Green Technology | Dec 2024 - Jan 2025
+- Supported data preparation, model exploration, and project documentation.
+
+Vodafone Idea Foundation
+Data Analytics Intern | Oct 2024 - Nov 2024
+- Supported reporting improvements, data cleanup, and insight summaries.
+
+EDUCATION
+MBA, Systems & Operations Management
+Sathyabama Institute of Science & Technology | 2023 - 2025
+
+BSc, Computer Science
+RDB College of Arts & Science (Bharathidasan University) | 2020 - 2023
