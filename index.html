@@ -1,722 +1,1207 @@
 <!DOCTYPE html>
-<html class="no-js ss-preload" lang="en">
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shahul Hameed — Technology Business Analyst | UAE</title>
+  <meta name="description" content="Technology Business Analyst bridging CS and business strategy in the UAE. I turn complex systems into measurable operational outcomes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Shahul Hameed - Technology Business Analyst | Systems, Data & Transformation</title>
-    <meta name="description" content="Technology Business Analyst based in the UAE, improving operations through systems, data analytics, and automation. Background in IT infrastructure, ERP/WMS, and digital transformation.">
-    <meta name="author" content="Shahul Hameed">
-    <meta name="keywords" content="Technology Business Analyst, Systems Analyst, Digital Transformation, IT Infrastructure, ERP, WMS, Data Analytics, Process Improvement, Python Automation">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Shahul Hameed - Technology Business Analyst">
-    <meta property="og:description" content="Technology Business Analyst improving operations through systems, data analytics, and automation.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://shahulhameed.site">
-    <meta property="og:image" content="https://shahulhameed.site/images/about-photo.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shahul Hameed - Technology Business Analyst">
-    <meta name="twitter:description" content="Technology Business Analyst focused on systems improvement, digital transformation, and automation.">
-    <meta name="theme-color" content="#000000">
-    
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+  <style>
+    :root {
+      --ink: #0f0f0e;
+      --ink-mid: #3d3b35;
+      --ink-light: #7a7870;
+      --ink-ghost: #b8b6b0;
+      --cream: #f7f5f0;
+      --white: #fefefe;
+      --accent: #c8472b;
+      --accent-pale: #f5ede9;
+      --gold: #b08d57;
+      --border: rgba(15,15,14,0.1);
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --radius: 4px;
+      --trans: 0.25s ease;
+    }
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="css/vendor.css" media="all">
-    <link rel="stylesheet" href="css/styles.css" media="all">
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
 
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="manifest" href="site.webmanifest">
-    
-    <!-- Performance & SEO
-    ================================================== -->
-    <link rel="canonical" href="https://shahulhameed.site/">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="preload" as="image" href="images/about-photo.jpg">
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(247,245,240,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5vw;
+      height: 58px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.8125rem; font-weight: 400;
+      color: var(--ink-mid); text-decoration: none;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      transition: color var(--trans);
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      font-size: 0.8125rem; font-weight: 500;
+      padding: 0.45rem 1.1rem;
+      background: var(--ink);
+      color: var(--white);
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background var(--trans);
+    }
+    .nav-cta:hover { background: var(--accent); }
 
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      padding: 140px 5vw 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -10%; right: -5%;
+      width: 55vw; height: 80vh;
+      background: radial-gradient(ellipse at center, rgba(200,71,43,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 24px; height: 1px;
+      background: var(--accent);
+    }
+    .hero-h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 4.5vw, 4rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-sub {
+      font-size: 1.0625rem;
+      color: var(--ink-mid);
+      max-width: 460px;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+    .hero-actions {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn-primary {
+      padding: 0.8rem 1.8rem;
+      background: var(--ink);
+      color: var(--white);
+      font-size: 0.875rem; font-weight: 500;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background var(--trans), transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+    .btn-ghost {
+      padding: 0.8rem 1.8rem;
+      border: 1px solid var(--border);
+      color: var(--ink-mid);
+      font-size: 0.875rem; font-weight: 400;
+      border-radius: var(--radius);
+      text-decoration: none;
+      background: transparent;
+      transition: border-color var(--trans), color var(--trans);
+    }
+    .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+    /* WHY badge — Start With Why */
+    .why-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      position: relative;
+    }
+    .why-card::before {
+      content: '"';
+      font-family: var(--serif);
+      font-size: 5rem;
+      color: var(--accent);
+      opacity: 0.15;
+      position: absolute;
+      top: 0.5rem; left: 1.5rem;
+      line-height: 1;
+    }
+    .why-label {
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .why-text {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      line-height: 1.6;
+      color: var(--ink);
+      font-style: italic;
+    }
+    .why-proof {
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 1rem;
+    }
+    .proof-stat .num {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .proof-stat .label {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      margin-top: 0.25rem;
+    }
+
+    /* ─── SECTION SHARED ─── */
+    section { padding: 96px 5vw; }
+    .section-eyebrow {
+      font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .section-h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      max-width: 640px;
+    }
+    .section-lead {
+      color: var(--ink-mid);
+      max-width: 560px;
+      margin-bottom: 3rem;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+    .divider {
+      width: 40px; height: 2px;
+      background: var(--accent);
+      margin-bottom: 3rem;
+    }
+
+    /* ─── POSITIONING STRIP (Law of Singularity) ─── */
+    #positioning {
+      background: var(--ink);
+      color: var(--white);
+      padding: 64px 5vw;
+    }
+    .positioning-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2px 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .pos-left .tag {
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .pos-left p {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      line-height: 1.5;
+      font-style: italic;
+      color: rgba(255,255,255,0.9);
+    }
+    .pos-divider { background: rgba(255,255,255,0.12); }
+    .pos-right {
+      display: flex; flex-direction: column; gap: 1.2rem;
+    }
+    .pos-pill {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 0.875rem; color: rgba(255,255,255,0.75);
+    }
+    .pos-pill::before {
+      content: '';
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0;
+    }
+    .pos-pill strong { color: var(--white); font-weight: 500; }
+
+    /* ─── FEATURED STORY — Shell (Cialdini: Authority) ─── */
+    #shell-feature {
+      background: var(--accent-pale);
+      border-top: 3px solid var(--accent);
+    }
+    .shell-inner {
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .shell-badge {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 0.5rem;
+    }
+    .shell-logo-box {
+      width: 80px; height: 80px;
+      background: var(--accent);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--white);
+      font-style: italic;
+    }
+    .shell-badge-label {
+      font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--accent); font-weight: 500;
+      text-align: center;
+    }
+    .shell-content .eyebrow {
+      font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); font-weight: 500; margin-bottom: 0.5rem;
+    }
+    .shell-content h3 {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    .shell-content p {
+      color: var(--ink-mid);
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      max-width: 520px;
+      margin-bottom: 1.25rem;
+    }
+    .shell-metrics {
+      display: flex; gap: 2rem; flex-wrap: wrap;
+    }
+    .shell-metric .num {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    .shell-metric .lbl {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+    }
+
+    /* ─── PROJECTS — Show Your Work ─── */
+    #projects { background: var(--white); }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .project-card {
+      background: var(--white);
+      padding: 2rem;
+      position: relative;
+      cursor: pointer;
+      transition: background var(--trans);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .project-card:hover { background: var(--cream); }
+    .project-tag {
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--ink-ghost);
+      margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .project-tag::before {
+      content: ''; width: 16px; height: 1px;
+      background: var(--ink-ghost);
+    }
+    .project-h3 {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    .project-desc {
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    .project-impact {
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 500;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .project-impact::before { content: '→'; }
+    .project-stack {
+      margin-top: 1rem;
+      display: flex; gap: 0.4rem; flex-wrap: wrap;
+    }
+    .stack-pill {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--ink-light);
+    }
+
+    /* ─── EXPERIENCE — Lean Startup: Metrics ─── */
+    #experience { background: var(--cream); }
+    .exp-timeline {
+      max-width: 760px;
+      position: relative;
+    }
+    .exp-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+    .exp-item {
+      padding-left: 2rem;
+      padding-bottom: 3rem;
+      position: relative;
+    }
+    .exp-item::before {
+      content: '';
+      position: absolute;
+      left: -4px; top: 8px;
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--accent);
+    }
+    .exp-item.featured::before {
+      background: var(--accent);
+      width: 11px; height: 11px;
+      left: -5px;
+    }
+    .exp-date {
+      font-size: 0.75rem; letter-spacing: 0.06em;
+      color: var(--ink-ghost);
+      margin-bottom: 0.25rem;
+    }
+    .exp-role {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      margin-bottom: 0.15rem;
+    }
+    .exp-company {
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+      margin-bottom: 0.85rem;
+      font-weight: 500;
+    }
+    .exp-badge {
+      display: inline-block;
+      font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      background: var(--accent);
+      color: var(--white);
+      border-radius: 2px;
+      margin-left: 0.5rem;
+    }
+    .exp-bullets { list-style: none; }
+    .exp-bullets li {
+      font-size: 0.875rem;
+      color: var(--ink-mid);
+      line-height: 1.65;
+      padding-left: 1rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+    }
+    .exp-bullets li::before {
+      content: '—';
+      position: absolute; left: 0;
+      color: var(--ink-ghost);
+    }
+    .exp-bullets li strong { color: var(--ink); font-weight: 500; }
+    .exp-metrics {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+      margin-top: 1rem; padding-top: 1rem;
+      border-top: 1px dashed var(--border);
+    }
+    .exp-metric {
+      display: flex; align-items: baseline; gap: 0.35rem;
+    }
+    .exp-metric .n {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+    .exp-metric .l {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+    }
+
+    /* ─── STACK ─── */
+    #stack { background: var(--white); }
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .stack-group {
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .stack-group-label {
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .stack-items { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .stack-item {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.65rem;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--ink-mid);
+      background: var(--cream);
+    }
+
+    /* ─── SOCIAL PROOF — Cialdini ─── */
+    #proof { background: var(--ink); }
+    .proof-header .section-h2 { color: var(--white); }
+    .proof-header .section-eyebrow { color: var(--gold); }
+    .proof-header .section-lead { color: rgba(255,255,255,0.55); }
+    .proof-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .proof-card {
+      padding: 1.75rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+    }
+    .proof-card .ico {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+    .proof-card .title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+    .proof-card .desc {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+    .cert-grid {
+      margin-top: 2rem;
+      display: flex; gap: 0.5rem; flex-wrap: wrap;
+    }
+    .cert-badge {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.8rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.5);
+      border-radius: 2px;
+    }
+
+    /* ─── ABOUT (StoryBrand: Guide role) ─── */
+    #about { background: var(--cream); }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .about-left .edu-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .about-left .edu-item:last-child { border-bottom: none; }
+    .edu-degree {
+      font-family: var(--serif);
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+    .edu-school {
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+    }
+    .edu-detail {
+      font-size: 0.8rem;
+      color: var(--ink-light);
+      margin-top: 0.2rem;
+    }
+    .about-bio {
+      font-size: 0.9375rem;
+      color: var(--ink-mid);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .about-principle {
+      padding: 1.25rem;
+      background: var(--white);
+      border-left: 3px solid var(--accent);
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    /* ─── CONTACT ─── */
+    #contact {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .contact-sub {
+      color: var(--ink-mid);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .contact-links {
+      display: flex; flex-direction: column; gap: 0.75rem;
+    }
+    .contact-link {
+      display: flex; align-items: center; gap: 0.75rem;
+      text-decoration: none;
+      color: var(--ink-mid);
+      font-size: 0.9rem;
+      transition: color var(--trans);
+    }
+    .contact-link:hover { color: var(--accent); }
+    .contact-link-icon {
+      width: 32px; height: 32px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+    .contact-right {
+      padding: 2.5rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .contact-right p {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    .contact-right .attribution {
+      font-size: 0.8rem;
+      color: var(--ink-light);
+    }
+    .contact-right .open-tag {
+      margin-top: 1.5rem;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--accent);
+    }
+    .open-tag::before {
+      content: '';
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.35);
+      padding: 2rem 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+    footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ─── SCROLL ANIMATIONS ─── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      #hero { grid-template-columns: 1fr; gap: 3rem; padding-top: 120px; }
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+      .proof-cards { grid-template-columns: 1fr 1fr; }
+      .stack-grid { grid-template-columns: 1fr 1fr; }
+      .contact-inner, .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .positioning-inner { grid-template-columns: 1fr; }
+      .pos-divider { display: none; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      .proof-cards { grid-template-columns: 1fr; }
+      .stack-grid { grid-template-columns: 1fr; }
+      .shell-inner { grid-template-columns: 1fr; }
+      .why-proof { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
+<body>
 
-<body id="top">
+  <!-- NAV -->
+  <nav>
+    <a class="nav-brand" href="#">Shahul Hameed</a>
+    <ul class="nav-links">
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Let's talk →</a>
+  </nav>
 
-
-    <!-- # preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader">
-        </div>
+  <!-- HERO — Start With Why + StoryBrand -->
+  <section id="hero">
+    <div class="hero-left fade-up">
+      <div class="hero-eyebrow">UAE · Technology Business Analyst</div>
+      <h1 class="hero-h1">
+        I turn <em>complex systems</em> into measurable operational outcomes.
+      </h1>
+      <p class="hero-sub">
+        With a Computer Science foundation and an MBA in Systems & Operations Management,
+        I sit at the intersection where IT delivery meets business strategy.
+        Organizations don't just need technology — they need someone who speaks both languages fluently.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#projects">See the work</a>
+        <a class="btn-ghost" href="https://docs.google.com/document/d/1xOL1WrgFP9xhUlVOq8W5zmbuxWSfn3Prv9ss4IvNDD4" target="_blank">Download CV</a>
+      </div>
     </div>
 
-
-    <!-- # page wrap
-    ================================================== -->
-    <div class="s-pagewrap">
-
-        <div class="circles">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- WHY card — Start With Why: lead with purpose -->
+    <div class="why-card fade-up" style="transition-delay:0.15s">
+      <div class="why-label">My why</div>
+      <p class="why-text">
+        "Most organizations have great people and great technology — but the gap between them
+        is where efficiency dies. I exist to close that gap."
+      </p>
+      <div class="why-proof">
+        <div class="proof-stat">
+          <div class="num">98%</div>
+          <div class="label">Order accuracy achieved at Trilogi</div>
         </div>
-
-
-        <!-- ## site header 
-        ================================================== -->
-        <header class="s-header" role="banner" aria-label="Main Navigation">
-
-            <div class="header-mobile">
-                <span class="mobile-home-link"><a href="index.html" aria-label="Shahul Hameed Home">Shahul Hameed</a></span>
-                <a class="mobile-menu-toggle" href="#0" aria-label="Toggle Mobile Menu"><span>Menu</span></a>
-            </div>
-
-            <div class="row wide main-nav-wrap">
-                <nav class="column lg-12 main-nav" aria-label="Main Navigation Menu">
-                    <ul>
-                        <li><a href="index.html" class="home-link" aria-label="Home">Hameed</a></li>
-                        <li class="current"><a href="#intro" class="smoothscroll" aria-label="Intro">Intro</a></li>
-                        <li><a href="#works" class="smoothscroll" aria-label="Projects">Projects</a></li>
-                        <li><a href="#about" class="smoothscroll" aria-label="About">About</a></li>
-                        <li><a href="#stack" class="smoothscroll" aria-label="Technology Stack">Stack</a></li>
-                        <li><a href="#resume" class="smoothscroll" aria-label="Resume">Resume</a></li>
-                        <li><a href="#contact" class="smoothscroll" aria-label="Contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-        </header> <!-- end s-header -->
-
-
-        <!-- ## main content
-        ==================================================- -->
-        <main class="s-content">
-
-
-            <!-- ### intro
-            ================================================== -->
-            <section id="intro" class="s-intro target-section" role="region" aria-label="Hero Section">
-
-                <div class="row intro-content wide">
-
-                    <div class="column">
-                        <div class="text-pretitle with-line">
-                            Technology Business Analyst | Systems, Data & Digital Transformation
-                        </div>
-
-                        <h1 class="text-medium-title">
-                            I help organizations improve operations through better systems, data visibility, and automation.
-                        </h1>
-
-                        <p>
-                            UAE-based analyst with an IT infrastructure foundation and hands-on experience across ERP/WMS operations,
-                            Microsoft 365 administration, and process improvement initiatives.
-                        </p>
-
-                        <p>
-                            <a href="#works" class="btn btn--primary smoothscroll">View Projects</a>
-                            <a href="#contact" class="btn btn--stroke smoothscroll">Contact</a>
-                        </p>
-                    </div>
-
-                    <ul class="intro-social">
-                        <li><a href="https://www.linkedin.com/in/Shahul16/">LinkedIn</a></li>
-                        <li><a href="https://github.com/Shahul16">GitHub</a></li>
-                        <li><a href="mailto:shahulofficial16@gmail.com">Email</a></li>
-                    </ul>
-
-                </div> <!-- end intro content -->
-
-                <a href="#works" class="intro-scrolldown smoothscroll" aria-label="Scroll down to Projects section">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" aria-hidden="true"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
-                </a>
-
-            </section> <!-- end s-intro -->
-
-
-            <!-- ### about
-            ================================================== -->
-            <section id="about" class="s-about target-section" role="region" aria-label="About and Experience Section">
-
-
-                <div class="row about-info wide" data-animate-block>
-
-                    <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="images/about-photo.jpg" 
-                             srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" 
-                             alt="Shahul Hameed - Technology Business Analyst" 
-                             class="about-info__pic" 
-                             data-animate-el
-                             loading="lazy">
-                    </div>
-
-                    <div class="column lg-6 md-12">
-                        <div class="about-info__text" >
-
-                            <h2 class="text-pretitle with-line" data-animate-el>
-                                About
-                            </h2>
-                            <p class="attention-getter" data-animate-el>
-                                I am a Technology Business Analyst based in the United Arab Emirates with a foundation in IT infrastructure and systems operations. My background combines a BSc in Computer Science with an MBA in Systems & Operations Management, helping me connect business goals with practical technology delivery.
-                            </p>
-                            <p data-animate-el>
-                                I have worked across IT infrastructure support, ERP/WMS operations, Microsoft 365 and Active Directory administration, SAP workflow execution, and automation initiatives. My focus is to improve reliability, efficiency, and reporting visibility through data, process design, and digital transformation.
-                            </p>
-                            <p data-animate-el>
-                                Long-term, I am building toward business and technology analyst roles that lead transformation programs, process modernization, and automation-driven operations improvement.
-                            </p>
-                            <a href="https://docs.google.com/document/d/1xOL1WrgFP9xhUlVOq8W5zmbuxWSfn3Prv9ss4IvNDD4/edit?usp=sharing" class="btn btn--medium u-fullwidth" data-animate-el target="_blank" rel="noopener noreferrer">Download CV/Resume</a>
-                        </div>
-                    </div>
-                </div> <!-- about-info -->
-
-
-                <div class="row about-expertise" data-animate-block>
-                    <div class="column lg-12">
-
-                        <h2 class="text-pretitle" data-animate-el>Expertise</h2>
-
-                        <ul class="skills-list h1" data-animate-el>
-                            <li>Business Analysis: Translate operational needs into system and process requirements.</li>
-                            <li>Systems & IT Infrastructure: Support and improve Windows/Linux environments, Microsoft 365, and identity workflows.</li>
-                            <li>ERP / WMS Operations: Drive smoother execution, issue handling, and process consistency in platform workflows.</li>
-                            <li>Data Analytics: Build KPI reporting and dashboards for faster operational decisions.</li>
-                            <li>Automation with Python: Reduce repetitive work in reporting, monitoring, and admin activities.</li>
-                            <li>Process Improvement: Standardize workflows to improve service quality and turnaround time.</li>
-                            <li>Digital Transformation: Align systems, people, and process changes with business outcomes.</li>
-                        </ul>
-
-                    </div>
-                </div> <!-- end about-expertise -->
-
-
-                <div class="row about-timelines" data-animate-block>
-
-                    <div class="column lg-6 tab-12">
-
-                        <h2 class="text-pretitle" data-animate-el>
-                            Experience
-                        </h2>
-
-                        <div class="timeline" data-animate-el>
-
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">SMART INFINITECH SOLUTIONS (UAE)</h4>
-                                    <h5 class="timeline__meta">IT Infrastructure & Systems Engineer</h5>
-                                    <p class="timeline__timeframe">2025 - Present</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Managed cross-functional systems support across infrastructure and business operations. Improved service stability, supported ERP and CRM usage, and introduced report automation to reduce repetitive manual tasks. Collaborated with operations teams to turn recurring issues into standardized workflows.</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">GMG (Trilogi Logistics) - Dubai</h4>
-                                    <h5 class="timeline__meta">Warehouse Tech & Operations Team Lead</h5>
-                                    <p class="timeline__timeframe">2025</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Led operational technology support for warehouse teams and device workflows. Improved asset visibility, reduced recurring downtime events, and supported frontline productivity by tightening support response and onboarding standards.</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Shell</h4>
-                                    <h5 class="timeline__meta">Intern, AI & Green Technology</h5>
-                                    <p class="timeline__timeframe">December 2024 - January 2025</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Contributed to AI and sustainability initiatives by supporting data preparation, model exploration, and structured documentation for project teams.</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Vodafone Idea Foundation</h4>
-                                    <h5 class="timeline__meta">Data Analytics Intern</h5>
-                                    <p class="timeline__timeframe">October 2024 - November 2024</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>Supported analytics workstreams with reporting structure improvements, data cleanup tasks, and insight summaries for non-technical stakeholders.</p>
-                                </div>
-                            </div>
-
-                        </div> <!-- end timeline -->
-
-                    </div> <!-- end column -->
-                    <div class="column lg-6 tab-12">
-
-                        <h2 class="text-pretitle" data-animate-el>
-                            Education
-                        </h2>
-
-                        <div class="timeline" data-animate-el>
-
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">Sathyabama Institute of Science & Technology</h4>
-                                    <h5 class="timeline__meta">MBA — Systems & Operations Management</h5>
-                                    <p class="timeline__timeframe">August 2023 – July 2025</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>CGPA: 8.31/10</p>
-                                </div>
-                            </div>
-    
-                            <div class="timeline__block">
-                                <div class="timeline__bullet"></div>
-                                <div class="timeline__header">
-                                    <h4 class="timeline__title">RDB College of Arts & Science, affiliated with Bharathidasan University</h4>
-                                    <h5 class="timeline__meta">BSc — Computer Science</h5>
-                                    <p class="timeline__timeframe">July 2020 – June 2023</p>
-                                </div>
-                                <div class="timeline__desc">
-                                    <p>CGPA: 8.2/10</p>
-                                </div>
-                            </div>
-    
-                        </div> <!-- end timeline -->
-                        
-                    </div> <!-- end column -->
-
-
-                </div> <!-- end about-timelines -->
-
-            </section> <!-- end s-about -->
-
-            <!-- ### Projects
-            ================================================== -->
-            <section id="works" class="s-works target-section" role="region" aria-label="Portfolio Projects Section">
-                <div class="row works-portfolio">
-                    <div class="column lg-12" data-animate-block>
-                        <h2 class="text-pretitle" data-animate-el>
-                            Projects / Case Studies
-                        </h2>
-                        <p class="h1" data-animate-el>
-                            Selected systems, analytics, and automation work focused on operational improvement.
-                        </p>
-            
-                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
-                            
-                            <!-- Project 1: AI Helpdesk Assistant -->
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-01">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/gallery/g-lamp.jpg" alt="AI Helpdesk Assistant" loading="lazy">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Service Operations
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            AI Helpdesk Assistant
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#contact" title="Request project walkthrough">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li>
-            
-                            <!-- Project 2: Python Automation Toolkit -->
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-02">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="Python Automation Toolkit" loading="lazy">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Automation
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Python Automation Toolkit
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#contact" title="Request project walkthrough">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li>
-            
-                            <!-- Project 3: Cloud Infrastructure Monitoring -->
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-03">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="Cloud Infrastructure Monitoring" loading="lazy">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Infrastructure
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Cloud Monitoring Dashboard
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#contact" title="Request project walkthrough">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li>
-            
-                            <!-- Project 4: ERP Analytics Dashboard -->
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-04">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/gallery/g-fuji.jpg" alt="ERP Analytics Dashboard" loading="lazy">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Data & ERP
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            ERP Analytics Dashboard
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#contact" title="Request project walkthrough">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li>
-            
-                            <!-- Project 5: Automated IT Ticket System -->
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-05">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="Automated IT Ticket System" loading="lazy">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Workflow Design
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Automated IT Ticket Workflow
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#contact" title="Request project walkthrough">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li>
-            
-                            <!-- Project 6: IT Support Knowledge Base -->
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-06">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/gallery/g-rucksack.jpg" alt="IT Support Knowledge Base" loading="lazy">
-                                    </div>
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Knowledge Systems
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            IT Knowledge Base
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#contact" title="Request project walkthrough">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li>
-            
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Modal Templates Popup -->
-<div id="modal-01" hidden>
-    <div class="modal-popup">
-        <img src="images/portfolio/gallery/g-lamp.jpg" alt="AI Helpdesk Assistant">
-        <div class="modal-popup__desc">
-            <h5>AI Helpdesk Assistant</h5>
-            <p><strong>Problem:</strong> IT support teams face overwhelming ticket volumes with repetitive queries, causing delayed resolution times.</p>
-            <p><strong>Solution:</strong> Built a support assistant prototype to classify common ticket categories and guide first-level troubleshooting.</p>
-            <p><strong>Technology Used:</strong> Python, Flask, NLP workflow, PostgreSQL</p>
-            <p><strong>Impact:</strong> Demonstrated faster triage for repetitive requests and better consistency in first-response guidance.</p>
-            <ul class="modal-popup__cat">
-                <li>AI & Machine Learning</li>
-                <li>NLP</li>
-                <li>Automation</li>
-            </ul>
+        <div class="proof-stat">
+          <div class="num">30%</div>
+          <div class="label">Operational error reduction</div>
         </div>
-        <a href="#contact" class="modal-popup__details">Request Project Walkthrough</a>
+        <div class="proof-stat">
+          <div class="num">50+</div>
+          <div class="label">Users trained on SAP workflows</div>
+        </div>
+      </div>
     </div>
-</div> <!-- end modal -->
+  </section>
 
-<div id="modal-02" hidden>
-    <div class="modal-popup">
-        <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="Python Automation Toolkit">
-        <div class="modal-popup__desc">
-            <h5>Python Automation Toolkit for IT Teams</h5>
-            <p><strong>Problem:</strong> IT teams spend excessive time on repetitive manual tasks like log analysis, report generation, and system health checks.</p>
-            <p><strong>Solution:</strong> Built reusable scripts for recurring operations tasks including reporting, health checks, and log processing.</p>
-            <p><strong>Technology Used:</strong> Python, Pandas, Selenium, scheduling libraries</p>
-            <p><strong>Impact:</strong> Reduced repetitive manual effort and improved process consistency for daily operational routines.</p>
-            <ul class="modal-popup__cat">
-                <li>Python Automation</li>
-                <li>DevOps</li>
-                <li>IT Operations</li>
-            </ul>
-        </div>
-        <a href="#contact" class="modal-popup__details">Request Project Walkthrough</a>
+  <!-- POSITIONING STRIP — Law of Singularity: own one concept -->
+  <div id="positioning">
+    <div class="positioning-inner">
+      <div class="pos-left">
+        <div class="tag">My singular position</div>
+        <p>
+          The analyst who actually knows what happens inside the systems —
+          not just the PowerPoints about them.
+        </p>
+      </div>
+      <div class="pos-divider"></div>
+      <div class="pos-right">
+        <div class="pos-pill"><strong>CS graduate</strong> who codes and configures, not just documents</div>
+        <div class="pos-pill"><strong>MBA-trained</strong> to think in business outcomes, not tickets</div>
+        <div class="pos-pill"><strong>UAE-based</strong> with active right-to-work, immediately available</div>
+        <div class="pos-pill"><strong>Systems-first</strong> — ERP, WMS, M365, SAP, AD — lived experience</div>
+      </div>
     </div>
-</div> <!-- end modal -->
+  </div>
 
-<div id="modal-03" hidden>
-    <div class="modal-popup">
-        <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="Cloud Infrastructure Monitoring">
-        <div class="modal-popup__desc">
-            <h5>Cloud Infrastructure Monitoring Platform</h5>
-            <p><strong>Problem:</strong> Organizations lack real-time visibility into their cloud infrastructure health, leading to delayed incident detection and response.</p>
-            <p><strong>Solution:</strong> Designed a dashboard concept for infrastructure visibility, alert routing, and service health tracking.</p>
-            <p><strong>Technology Used:</strong> AWS CloudWatch, GCP Monitoring, Grafana, Prometheus, Docker</p>
-            <p><strong>Impact:</strong> Improved observability and provided clearer escalation context for support teams.</p>
-            <ul class="modal-popup__cat">
-                <li>Cloud Computing</li>
-                <li>Infrastructure</li>
-                <li>Monitoring</li>
-            </ul>
+  <!-- SHELL FEATURE — Cialdini: Authority signal -->
+  <section id="shell-feature">
+    <div class="shell-inner fade-up">
+      <div class="shell-badge">
+        <div class="shell-logo-box">S</div>
+        <div class="shell-badge-label">Prestige<br/>Experience</div>
+      </div>
+      <div class="shell-content">
+        <div class="eyebrow">Featured Experience · Dec 2024 – Jan 2025</div>
+        <h3>AI & Green Technology Intern — Shell</h3>
+        <p>
+          Selected for Shell's competitive AI & Green Technology program, contributing to
+          data-driven environmental solutions at one of the world's most complex energy organizations.
+          Built an NLP-powered AI chatbot from scratch and led data modeling for sustainability initiatives.
+        </p>
+        <div class="shell-metrics">
+          <div class="shell-metric">
+            <span class="num">80%</span>
+            <span class="lbl">NLP chatbot accuracy</span>
+          </div>
+          <div class="shell-metric">
+            <span class="num">15%</span>
+            <span class="lbl">Sustainability efficiency gain</span>
+          </div>
+          <div class="shell-metric">
+            <span class="num">20%</span>
+            <span class="lbl">Problem-solving improvement</span>
+          </div>
         </div>
-        <a href="#contact" class="modal-popup__details">Request Project Walkthrough</a>
+      </div>
     </div>
-</div> <!-- end modal -->
+  </section>
 
-<div id="modal-04" hidden>
-    <div class="modal-popup">
-        <img src="images/portfolio/gallery/g-fuji.jpg" alt="ERP Analytics Dashboard">
-        <div class="modal-popup__desc">
-            <h5>ERP Analytics Dashboard</h5>
-            <p><strong>Problem:</strong> Business stakeholders need real-time insights into ERP performance metrics but lack accessible visualization tools.</p>
-            <p><strong>Solution:</strong> Created a dashboard framework to convert ERP transaction data into actionable KPIs for operations teams.</p>
-            <p><strong>Technology Used:</strong> SQL, Power BI, ERP API integration</p>
-            <p><strong>Impact:</strong> Helped stakeholders move from manual spreadsheet checks to structured, repeatable reporting views.</p>
-            <ul class="modal-popup__cat">
-                <li>Business Intelligence</li>
-                <li>Data Analytics</li>
-                <li>ERP Systems</li>
-            </ul>
+  <!-- PROJECTS — Show Your Work: process + proof -->
+  <section id="projects">
+    <div class="section-eyebrow">Selected Work</div>
+    <h2 class="section-h2 fade-up">Systems built. Problems solved. Results measured.</h2>
+    <p class="section-lead fade-up">Each project addresses a real operational friction — not a hypothetical.</p>
+    <div class="divider"></div>
+
+    <div class="projects-grid fade-up">
+
+      <a class="project-card" href="https://github.com/Shahul16" target="_blank">
+        <div class="project-tag">Automation · Python</div>
+        <h3 class="project-h3">AI Helpdesk Assistant</h3>
+        <p class="project-desc">Built a support assistant prototype to classify common IT tickets and guide first-level troubleshooting — reducing triage time for repetitive requests.</p>
+        <div class="project-impact">Faster triage, consistent first-response</div>
+        <div class="project-stack">
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">Flask</span>
+          <span class="stack-pill">NLP</span>
+          <span class="stack-pill">PostgreSQL</span>
         </div>
-        <a href="#contact" class="modal-popup__details">Request Project Walkthrough</a>
+      </a>
+
+      <a class="project-card" href="https://github.com/Shahul16" target="_blank">
+        <div class="project-tag">Data & ERP · Power BI</div>
+        <h3 class="project-h3">ERP Analytics Dashboard</h3>
+        <p class="project-desc">Converted ERP transaction data into actionable KPI dashboards — replacing manual spreadsheet checks with structured, repeatable reporting for operations teams.</p>
+        <div class="project-impact">From spreadsheets to live dashboards</div>
+        <div class="project-stack">
+          <span class="stack-pill">SQL</span>
+          <span class="stack-pill">Power BI</span>
+          <span class="stack-pill">ERP API</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/Shahul16" target="_blank">
+        <div class="project-tag">Python Automation</div>
+        <h3 class="project-h3">Python Automation Toolkit</h3>
+        <p class="project-desc">Reusable scripts for recurring IT tasks: log analysis, report generation, and system health checks — freeing up hours of manual effort weekly.</p>
+        <div class="project-impact">Reduced repetitive manual effort daily</div>
+        <div class="project-stack">
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">Pandas</span>
+          <span class="stack-pill">Selenium</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/Shahul16" target="_blank">
+        <div class="project-tag">Infrastructure · Cloud</div>
+        <h3 class="project-h3">Cloud Monitoring Dashboard</h3>
+        <p class="project-desc">Designed a unified infrastructure visibility dashboard covering alert routing and service health tracking across AWS and GCP environments.</p>
+        <div class="project-impact">Faster incident detection and response</div>
+        <div class="project-stack">
+          <span class="stack-pill">AWS CloudWatch</span>
+          <span class="stack-pill">Grafana</span>
+          <span class="stack-pill">Docker</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/Shahul16" target="_blank">
+        <div class="project-tag">Workflow Design</div>
+        <h3 class="project-h3">Automated IT Ticket Workflow</h3>
+        <p class="project-desc">Standardized ticket routing and SLA checkpoints — eliminating manual assignment delays and improving tracking discipline across the support team.</p>
+        <div class="project-impact">SLA compliance, zero missed escalations</div>
+        <div class="project-stack">
+          <span class="stack-pill">Python</span>
+          <span class="stack-pill">Django</span>
+          <span class="stack-pill">PostgreSQL</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://shahulhameed.site" target="_blank">
+        <div class="project-tag">Web · This Site</div>
+        <h3 class="project-h3">This Portfolio</h3>
+        <p class="project-desc">Designed and deployed a production-ready portfolio with custom domain, PWA support, ATS resume, SEO metadata, and an AI chat assistant — from scratch.</p>
+        <div class="project-impact">Live at shahulhameed.site</div>
+        <div class="project-stack">
+          <span class="stack-pill">HTML5</span>
+          <span class="stack-pill">CSS3</span>
+          <span class="stack-pill">JS</span>
+          <span class="stack-pill">PWA</span>
+        </div>
+      </a>
+
     </div>
-</div> <!-- end modal -->
+  </section>
 
-<div id="modal-05" hidden>
-    <div class="modal-popup">
-        <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="Automated IT Ticket System">
-        <div class="modal-popup__desc">
-            <h5>Automated IT Ticket System</h5>
-            <p><strong>Problem:</strong> Manual ticket routing leads to inefficient resource allocation and missed SLA deadlines.</p>
-            <p><strong>Solution:</strong> Defined routing logic and SLA checkpoints to standardize issue assignment and follow-up handling.</p>
-            <p><strong>Technology Used:</strong> Python, Django, PostgreSQL, queue-based processing</p>
-            <p><strong>Impact:</strong> Improved ticket handling discipline and reduced delays caused by manual triage steps.</p>
-            <ul class="modal-popup__cat">
-                <li>IT Operations</li>
-                <li>Automation</li>
-                <li>Web Development</li>
-            </ul>
+  <!-- EXPERIENCE — Lean Startup: measure everything -->
+  <section id="experience">
+    <div class="section-eyebrow">Experience</div>
+    <h2 class="section-h2 fade-up">Every role, every measurable result.</h2>
+    <div class="divider"></div>
+
+    <div class="exp-timeline fade-up">
+
+      <div class="exp-item featured">
+        <div class="exp-date">Sep 2025 – Present · 7 months</div>
+        <div class="exp-role">IT Infrastructure & Systems Engineer <span class="exp-badge">Current</span></div>
+        <div class="exp-company">Smart Infinitech Solutions — Dubai, UAE</div>
+        <ul class="exp-bullets">
+          <li>Lead IT support across Windows, Microsoft 365, Active Directory, and user access management</li>
+          <li>Provide L1/L2 support and coordinate cross-vendor issue resolution</li>
+          <li>Drive digital process improvements, SOPs, and automation initiatives</li>
+        </ul>
+      </div>
+
+      <div class="exp-item featured">
+        <div class="exp-date">Mar 2025 – Sep 2025 · 7 months</div>
+        <div class="exp-role">Team Lead — Warehouse Tech & Operations</div>
+        <div class="exp-company">Trilogi Logistics (GMG) — Dubai, UAE</div>
+        <ul class="exp-bullets">
+          <li>Supported <strong>SAP S/4HANA MM & SD workflows</strong> — POs, GRN, stock transfers, billing</li>
+          <li>Designed SOPs and trained <strong>50+ users</strong>, reducing incident tickets by <strong>15%</strong></li>
+          <li>Improved order accuracy to <strong>98%</strong>, reduced errors by <strong>30%</strong>, increased productivity by <strong>25%</strong></li>
+        </ul>
+        <div class="exp-metrics">
+          <div class="exp-metric"><span class="n">98%</span><span class="l">order accuracy</span></div>
+          <div class="exp-metric"><span class="n">30%</span><span class="l">fewer errors</span></div>
+          <div class="exp-metric"><span class="n">25%</span><span class="l">productivity up</span></div>
+          <div class="exp-metric"><span class="n">50+</span><span class="l">users trained</span></div>
         </div>
-        <a href="#contact" class="modal-popup__details">Request Project Walkthrough</a>
+      </div>
+
+      <div class="exp-item featured">
+        <div class="exp-date">Dec 2024 – Jan 2025 · 2 months</div>
+        <div class="exp-role">Intern — AI & Green Technology</div>
+        <div class="exp-company">Shell · Global Energy Leader</div>
+        <ul class="exp-bullets">
+          <li>Led data modeling for AI-driven environmental solutions — <strong>15% sustainability efficiency gain</strong></li>
+          <li>Built NLP-powered AI chatbot achieving <strong>80% query accuracy</strong></li>
+          <li>Weekly mentorship program, improving problem-solving efficiency by <strong>20%</strong></li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">Oct 2024 – Nov 2024</div>
+        <div class="exp-role">Data Analytics Intern</div>
+        <div class="exp-company">Vodafone Idea Foundation — India</div>
+        <ul class="exp-bullets">
+          <li>Analyzed superstore sales data using Python, Pandas, and Seaborn for inventory optimization</li>
+          <li>Implemented predictive analytics for healthcare resource allocation using AI/ML models</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">Jan 2025 – Sep 2025</div>
+        <div class="exp-role">IT Support & Digital Solutions Specialist</div>
+        <div class="exp-company">Smart Infinitech Solutions — UAE</div>
+        <ul class="exp-bullets">
+          <li>Day-to-day IT support across systems, devices, and applications</li>
+          <li>Digital process improvement, documentation, and basic automation</li>
+        </ul>
+      </div>
+
     </div>
-</div> <!-- end modal -->
+  </section>
 
-<div id="modal-06" hidden>
-    <div class="modal-popup">
-        <img src="images/portfolio/gallery/g-rucksack.jpg" alt="IT Support Knowledge Base">
-        <div class="modal-popup__desc">
-            <h5>IT Support Knowledge Base</h5>
-            <p><strong>Problem:</strong> IT support teams lack a centralized, searchable repository of solutions, leading to inconsistent troubleshooting approaches.</p>
-            <p><strong>Solution:</strong> Built a searchable support knowledge structure with category-based troubleshooting guides and standard resolution templates.</p>
-            <p><strong>Technology Used:</strong> Markdown, documentation framework, version control</p>
-            <p><strong>Impact:</strong> Reduced duplicated troubleshooting effort and improved onboarding speed for recurring issue types.</p>
-            <ul class="modal-popup__cat">
-                <li>Knowledge Management</li>
-                <li>Documentation</li>
-                <li>IT Support</li>
-            </ul>
+  <!-- STACK -->
+  <section id="stack">
+    <div class="section-eyebrow">Technology Stack</div>
+    <h2 class="section-h2 fade-up">Tools I use to get things done.</h2>
+    <div class="divider"></div>
+
+    <div class="stack-grid fade-up">
+      <div class="stack-group">
+        <div class="stack-group-label">Business Platforms</div>
+        <div class="stack-items">
+          <span class="stack-item">SAP S/4HANA</span>
+          <span class="stack-item">ERP / WMS</span>
+          <span class="stack-item">Microsoft 365</span>
+          <span class="stack-item">Active Directory</span>
         </div>
-        <a href="#contact" class="modal-popup__details">Request Project Walkthrough</a>
+      </div>
+      <div class="stack-group">
+        <div class="stack-group-label">Analytics & Data</div>
+        <div class="stack-items">
+          <span class="stack-item">Power BI</span>
+          <span class="stack-item">SQL</span>
+          <span class="stack-item">Excel</span>
+          <span class="stack-item">Python</span>
+          <span class="stack-item">Pandas</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <div class="stack-group-label">Infrastructure</div>
+        <div class="stack-items">
+          <span class="stack-item">Windows Server</span>
+          <span class="stack-item">Linux</span>
+          <span class="stack-item">AWS</span>
+          <span class="stack-item">Google Cloud</span>
+          <span class="stack-item">Docker</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <div class="stack-group-label">Automation & Dev</div>
+        <div class="stack-items">
+          <span class="stack-item">Python scripting</span>
+          <span class="stack-item">Flask</span>
+          <span class="stack-item">Django</span>
+          <span class="stack-item">Selenium</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <div class="stack-group-label">AI & ML</div>
+        <div class="stack-items">
+          <span class="stack-item">NLP</span>
+          <span class="stack-item">scikit-learn</span>
+          <span class="stack-item">LLM workflows</span>
+          <span class="stack-item">ChatGPT / API</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <div class="stack-group-label">Ways of Working</div>
+        <div class="stack-items">
+          <span class="stack-item">Process mapping</span>
+          <span class="stack-item">Root cause analysis</span>
+          <span class="stack-item">UAT</span>
+          <span class="stack-item">SOP design</span>
+        </div>
+      </div>
     </div>
-</div> <!-- end modal -->
+  </section>
 
-                <!-- Testimonials section intentionally removed -->
-
-            </section> <!-- end s-works -->
-
-
-            <!-- ### Technology Stack
-    ================================================== -->
-<section id="stack" class="s-about target-section" role="region" aria-label="Technology Stack Section">
-
-    <div class="row about-expertise" data-animate-block>
-        <div class="column lg-12">
-            <h2 class="text-pretitle" data-animate-el>Technology Stack</h2>
-            <ul class="skills-list h1" data-animate-el>
-                <li>Systems: Windows Server, Linux, Active Directory, Microsoft 365</li>
-                <li>Business Platforms: ERP / WMS workflows, SAP process exposure</li>
-                <li>Analytics: Excel, SQL, Power BI, KPI and operational dashboarding</li>
-                <li>Automation: Python scripting for reporting and operational tasks</li>
-                <li>Infrastructure: Cloud fundamentals (AWS, Google Cloud), monitoring basics</li>
-                <li>Ways of Working: Process mapping, root-cause analysis, and cross-team coordination</li>
-            </ul>
-        </div>
+  <!-- SOCIAL PROOF — Cialdini -->
+  <section id="proof">
+    <div class="proof-header">
+      <div class="section-eyebrow">Credentials & Authority</div>
+      <h2 class="section-h2 fade-up">Why organizations trust Shahul with their systems.</h2>
+      <p class="section-lead fade-up">Evidence-based credibility, not just claims.</p>
     </div>
-
-    <div class="row about-timelines" data-animate-block>
-        <div class="column lg-12">
-            <h2 class="text-pretitle" data-animate-el>Thought Leadership</h2>
-            <div class="timeline" data-animate-el>
-                <div class="timeline__block">
-                    <div class="timeline__bullet"></div>
-                    <div class="timeline__header">
-                        <h4 class="timeline__title">What I Share</h4>
-                        <h5 class="timeline__meta">Systems, Process, and Transformation Insights</h5>
-                    </div>
-                    <div class="timeline__desc">
-                        <p>I share practical insights on operations excellence, business systems, and automation-driven process improvement. Current focus areas include data-informed decisions, service reliability, and digital transformation execution for growing teams.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="proof-cards fade-up">
+      <div class="proof-card">
+        <div class="ico">🎓</div>
+        <div class="title">Dual Academic Foundation</div>
+        <div class="desc">BSc Computer Science + MBA Systems & Operations Management. Rare combination that bridges technical depth and business strategy.</div>
+      </div>
+      <div class="proof-card">
+        <div class="ico">🛢️</div>
+        <div class="title">Shell-Vetted</div>
+        <div class="desc">Competed for and completed Shell's AI & Green Technology internship. One of global energy's most rigorous selection processes.</div>
+      </div>
+      <div class="proof-card">
+        <div class="ico">📦</div>
+        <div class="title">Enterprise Systems Experience</div>
+        <div class="desc">Hands-on SAP S/4HANA, ERP/WMS operations, and Microsoft 365 administration in live production environments in the UAE.</div>
+      </div>
+      <div class="proof-card">
+        <div class="ico">📊</div>
+        <div class="title">Measurable Outcomes</div>
+        <div class="desc">Every role, every number tracked. 98% order accuracy. 30% error reduction. 15% ticket reduction. Not hypothetical — documented.</div>
+      </div>
     </div>
-
-</section> <!-- end stack -->
-
-
-            <!-- ### resume
-    ================================================== -->
-<section id="resume" class="s-about target-section" role="region" aria-label="Resume Summary Section">
-
-    <div class="row about-info wide" data-animate-block>
-        <div class="column lg-12">
-            <div class="about-info__text">
-                <h2 class="text-pretitle with-line" data-animate-el>ATS Resume Snapshot</h2>
-                <p class="attention-getter" data-animate-el>
-                    Technology Business Analyst with hands-on experience in IT infrastructure, ERP/WMS operations,
-                    and data-driven process improvement. Strong blend of technical execution and operations understanding,
-                    with a focus on reliability, efficiency, and transformation outcomes.
-                </p>
-                <ul class="skills-list" data-animate-el>
-                    <li>Location: United Arab Emirates</li>
-                    <li>Education: BSc Computer Science; MBA Systems & Operations Management</li>
-                    <li>Core Areas: Business analysis, systems operations, reporting, automation, and process optimization</li>
-                    <li>Platforms: Microsoft 365, Active Directory, ERP/WMS workflows, SAP process exposure</li>
-                </ul>
-                <p data-animate-el>
-                    <a href="Shahul_Hameed_ATS_Resume.txt" class="btn btn--primary" download>Download ATS Resume (TXT)</a>
-                </p>
-            </div>
-        </div>
+    <div class="cert-grid fade-up">
+      <span class="cert-badge">SQL Essential Training</span>
+      <span class="cert-badge">AWS Solutions Architecture</span>
+      <span class="cert-badge">Cybersecurity Essentials</span>
+      <span class="cert-badge">Project Management Essential</span>
+      <span class="cert-badge">ChatGPT in Smart Learning</span>
+      <span class="cert-badge">Google Cloud Arcade 2026</span>
+      <span class="cert-badge">CS50x Harvard 2026</span>
     </div>
+  </section>
 
-</section> <!-- end resume -->
-
-
-            <!-- ### contact
-    ================================================== -->
-<section id="contact" class="s-contact target-section" role="region" aria-label="Contact Information Section">
-
-    <div class="row contact-top">
-        <div class="column lg-12">
-            <h2 class="text-pretitle">
-                Get In Touch
-            </h2>
-
-            <p class="h1">
-                Open to Technology Analyst, Business Analyst, and Digital Transformation opportunities in the UAE and remote environments.
-                If you are hiring for systems, operations, and data-driven improvement roles, I would be glad to connect.
-            </p>
+  <!-- ABOUT — StoryBrand: I'm the guide, you're the hero -->
+  <section id="about">
+    <div class="section-eyebrow">About</div>
+    <div class="about-inner">
+      <div class="about-left">
+        <h2 class="section-h2">Education</h2>
+        <div class="divider"></div>
+        <div class="edu-item">
+          <div class="edu-degree">MBA — Systems & Operations Management</div>
+          <div class="edu-school">Sathyabama Institute of Science & Technology, Chennai</div>
+          <div class="edu-detail">Aug 2023 – Jul 2025 · CGPA 8.31/10</div>
         </div>
-    </div> <!-- end contact-top -->
-
-    <div class="row contact-bottom">
-        <div class="column lg-5 md-5 tab-6 stack-on-550">
-            <h3 class="text-pretitle">Reach me at</h3>
-            <p class="contact-links">
-                <a href="mailto:shahulofficial16@gmail.com" class="mailtoui">shahulofficial16@gmail.com</a> <br>
-                <a href="tel:+971589922059">+971 58 9922 059</a>
-            </p>
+        <div class="edu-item">
+          <div class="edu-degree">BSc — Computer Science</div>
+          <div class="edu-school">RDB College, Bharathidasan University</div>
+          <div class="edu-detail">Jul 2020 – Jun 2023 · CGPA 8.2/10</div>
         </div>
-        <div class="column lg-4 md-5 tab-6 stack-on-550">
-            <h3 class="text-pretitle">Social</h3>
-            <ul class="contact-social">
-                <li><a href="https://linkedin.com/in/shahul16">linkedin</a></li>
-                <li><a href="https://github.com/Shahul16">Github</a></li>
-            </ul>
+        <div class="edu-item">
+          <div class="edu-degree">Languages</div>
+          <div class="edu-school">English (Professional) · Tamil (Native) · Malayalam · Hindi</div>
         </div>
-        <div class="column lg-3 md-12 tab-12">
-            <a href="mailto:shahulofficial16@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
+      </div>
+      <div class="about-right">
+        <h2 class="section-h2 fade-up">The guide behind the work.</h2>
+        <div class="divider"></div>
+        <p class="about-bio fade-up">
+          I started as a developer, learned infrastructure, stepped into operations, and then asked the harder question:
+          why do well-resourced teams still struggle with systems that should just work?
+        </p>
+        <p class="about-bio fade-up">
+          The answer was almost never the technology. It was the gap between what the business needed and
+          what IT understood how to build. That gap is where I operate.
+        </p>
+        <p class="about-bio fade-up">
+          I'm based in the UAE, actively looking for Technology Analyst, Business Analyst,
+          or Digital Transformation roles where I can bring both sides of my background to bear.
+        </p>
+        <div class="about-principle fade-up">
+          "The goal is not to sell what I make. It's to make what solves the problem —
+          and prove it worked."
         </div>
-    </div> <!-- end contact-bottom -->
-
-</section> <!-- end contact -->
-
-</main> <!-- end s-content -->
-
-
-
-       <!-- ## footer ================================================== -->
-<footer class="s-footer">
-
-    <div class="row">
-        <div class="column ss-copyright">
-            <span>© Copyright Shahul Hameed 2026</span>
-        </div>
-
-        <div class="ss-go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
-            </a>
-        </div>
+      </div>
     </div>
+  </section>
 
-</footer> <!-- end s-footer -->
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-left fade-up">
+        <h2 class="contact-h2">Open to the right opportunity.</h2>
+        <p class="contact-sub">
+          If you're hiring for analyst, transformation, or systems roles in the UAE or remote-first
+          environments — let's talk. I reply within 24 hours.
+        </p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:shahulofficial16@gmail.com">
+            <div class="contact-link-icon">@</div>
+            shahulofficial16@gmail.com
+          </a>
+          <a class="contact-link" href="tel:+971589922059">
+            <div class="contact-link-icon">☎</div>
+            +971 58 9922 059
+          </a>
+          <a class="contact-link" href="https://linkedin.com/in/shahul16" target="_blank">
+            <div class="contact-link-icon">in</div>
+            linkedin.com/in/shahul16
+          </a>
+          <a class="contact-link" href="https://github.com/Shahul16" target="_blank">
+            <div class="contact-link-icon">gh</div>
+            github.com/Shahul16
+          </a>
+          <a class="contact-link" href="https://shahulhameed.site" target="_blank">
+            <div class="contact-link-icon">↗</div>
+            shahulhameed.site
+          </a>
+        </div>
+      </div>
+      <div class="contact-right fade-up">
+        <p>
+          "The best marketing is education. When you teach people something useful,
+          they come to you when they're ready to buy."
+        </p>
+        <div class="attribution">— Adapted from <em>Known</em>, Mark Schaefer</div>
+        <div class="open-tag">Available for interviews now · Dubai, UAE</div>
+      </div>
+    </div>
+  </section>
 
-<!-- Chatbot Widget -->
-<div class="chatbot" aria-live="polite">
-    <button id="chatbot-toggle" class="chatbot__toggle" aria-expanded="false" aria-controls="chatbot-panel" aria-label="Open chat assistant">
-        Chat
-    </button>
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 Shahul Hameed · Technology Business Analyst · UAE</span>
+    <span>
+      <a href="https://shahulhameed.site">shahulhameed.site</a> ·
+      <a href="mailto:shahulofficial16@gmail.com">Email</a> ·
+      <a href="https://linkedin.com/in/shahul16">LinkedIn</a>
+    </span>
+  </footer>
 
-    <section id="chatbot-panel" class="chatbot__panel" hidden aria-label="Website assistant chat">
-        <header class="chatbot__header">
-            <h3>Hameed Assistant</h3>
-            <button id="chatbot-close" class="chatbot__close" type="button" aria-label="Close chat assistant">×</button>
-        </header>
-
-        <div id="chatbot-messages" class="chatbot__messages"></div>
-
-        <form id="chatbot-form" class="chatbot__form" autocomplete="off">
-            <label for="chatbot-input" class="screen-reader-text">Type your message</label>
-            <input id="chatbot-input" class="chatbot__input" type="text" placeholder="Ask about skills, projects, contact..." maxlength="240" required>
-            <button class="chatbot__send" type="submit">Send</button>
-        </form>
-    </section>
-</div>
-
-</div> <!-- end -s-pagewrap -->
-
-<!-- Java Script ================================================== -->
-<script src="js/plugins.js" defer></script>
-<script src="js/main.js" defer></script>
+  <script>
+    // Fade-up observer
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  </script>
 
 </body>
 </html>
