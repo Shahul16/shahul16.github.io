@@ -2,18 +2,18 @@
 
 Date: 15 March 2026
 Repository: shahul16.github.io
-Audit scope: Full workspace snapshot (static site + Next.js implementation)
+Audit scope: Full workspace snapshot (post-cleanup static-only repository)
 
 ## 1) Executive Summary
 
-This repository is in a healthy publishable state for the static portfolio site and includes a parallel modern Next.js implementation. The latest redesign has already been committed and pushed to main.
+This repository is in a healthy publishable state for a static portfolio deployment on GitHub Pages. The redesign is live in the repository, Next.js has been removed intentionally, and documentation has been aligned to the static-only architecture.
 
 Current high-level status:
 - Production static page is active in index.html and aligned with current messaging.
 - Git main is synchronized with origin/main.
-- One untracked source file remains in root: shahul_portfolio_upgraded.html.
+- No untracked files or pending staged changes.
 - SEO and domain wiring are present (CNAME, robots, sitemap, manifest).
-- Next.js app exists and is structured for independent deployment.
+- Repository now operates as a single delivery path: static site from root.
 
 ## 2) Git and Release State
 
@@ -22,19 +22,26 @@ Branch and remote state:
 - Remote: origin (GitHub)
 - Sync: main equals origin/main
 
-Most recent commit:
+Most recent commits:
+- Hash: 339e40c
+- Message: docs: align project docs with static-only repository
+- Impact: removed stale Next.js references from README and project guide
+
+- Hash: c0f1292
+- Message: chore: remove next-portfolio and add project audit report
+- Impact: removed entire next-portfolio subtree and added this audit file
+
 - Hash: aad6d8b
 - Message: redesign: book-framework upgrade - StoryBrand, Start With Why, KNOWN
-- Impact: index.html replaced with redesigned content
+- Impact: deployed upgraded portfolio content to index.html
 
-Open working-tree item:
-- Untracked: shahul_portfolio_upgraded.html
+Working tree status:
+- Clean
 
 ## 3) Architecture Overview
 
 Primary delivery paths:
 - Static production site from repository root
-- Next.js modern site inside next-portfolio
 
 Static path components:
 - index.html
@@ -49,13 +56,6 @@ Static path components:
 - CNAME
 - .htaccess
 
-Next.js path components:
-- next-portfolio/package.json
-- next-portfolio/src/app/layout.tsx
-- next-portfolio/src/app/page.tsx
-- next-portfolio/src/app/globals.css
-- next-portfolio/public/Shahul_Hameed_ATS_Resume.txt
-
 ## 4) Content and Positioning Health
 
 Positioning consistency:
@@ -64,7 +64,7 @@ Positioning consistency:
 
 Messaging quality:
 - Recruiter-oriented, outcome-driven wording appears consistently in root documentation and page content.
-- Resume snapshot is available in both root and Next.js public folders.
+- Resume snapshot is available in root as Shahul_Hameed_ATS_Resume.txt.
 
 ## 5) SEO, Domain, and Discoverability
 
@@ -93,18 +93,14 @@ JavaScript behavior in static site includes:
 
 Approximate storage footprint:
 - images/: 1.8M
-- next-portfolio/: 312K
 - js/: 224K
 - css/: 124K
 - index.html: 44K
 
 Line counts (selected core files):
 - index.html: 1207
-- shahul_portfolio_upgraded.html: 1207
 - css/styles.css: 4631
 - js/main.js: 570
-- next-portfolio/src/app/page.tsx: 299
-- next-portfolio/src/app/globals.css: 50
 
 ## 8) Risks and Improvement Opportunities
 
@@ -113,16 +109,16 @@ High priority:
 
 Medium priority:
 - Chatbot dependency resilience: external inference endpoint can fail or rate-limit; keep fallback messaging robust.
-- Duplicate resume copies: maintain one canonical source workflow to avoid drift.
+- Add a lightweight static validation routine (links/meta checks) before each push.
 
 Low priority:
 - Add periodic check for broken links and asset references.
-- Add optional automated validation in CI for static integrity and Next.js lint/build.
+- Add optional CI job for static integrity checks.
 
 ## 9) Priority Action Plan
 
 P0 (immediate):
-- Resolve root untracked file policy (keep, archive, or delete).
+- Keep working tree clean after each publish commit.
 
 P1 (short term):
 - Add lightweight QA script/checklist for:
@@ -133,17 +129,16 @@ P1 (short term):
 P2 (next iteration):
 - Introduce CI workflow for:
 - root static checks
-- next-portfolio lint/build checks
 
 ## 10) Recommended Repository Decisions
 
-Decision A: Keep dual-delivery strategy
-- Keep root static site as production for GitHub Pages.
-- Keep next-portfolio as modern implementation branch path.
+Decision A: Keep static-only delivery strategy
+- Keep root static site as production on GitHub Pages.
+- Keep architecture simple and focused on recruiter-facing outcomes.
 
 Decision B: Define source-of-truth file policy
-- Option 1: index.html only (remove duplicate upgraded file).
-- Option 2: keep upgraded source in a dedicated archive or drafts folder with naming convention.
+- Source-of-truth is index.html in repository root.
+- Keep alternates/drafts outside root or in a clearly named archive folder only when needed.
 
 Decision C: Add maintenance cadence
 - Monthly content and link check
@@ -155,18 +150,17 @@ Completed:
 - Root structure inventory captured
 - Git branch/remote/commit state captured
 - Key documentation reviewed
-- Next.js package and scripts reviewed
+- Docs synchronized to static-only architecture
 - Core SEO and domain files verified
 - Core JS behavior file reviewed
+- Cleanup and doc-sync commits pushed to origin/main
 
 Not executed in this audit run:
 - Live browser rendering validation
-- Next.js npm run lint
-- Next.js npm run build
 - Lighthouse or Core Web Vitals measurement
 
 ## 12) Final Status
 
 Overall status: Stable and publishable.
 
-Primary recommendation: finalize repository hygiene for duplicate root HTML source file and add lightweight automated quality checks.
+Primary recommendation: add lightweight static QA/CI checks and schedule periodic performance/SEO validation.
