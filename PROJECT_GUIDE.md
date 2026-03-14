@@ -17,8 +17,8 @@ This portfolio presents Shahul Hameed as a Technology Business Analyst with stre
 - `css/` - production styles
 - `js/` - interactions and chatbot logic
 - `images/` - live image assets
-- `next-portfolio/` - modern Next.js implementation
 - `Shahul_Hameed_ATS_Resume.txt` - ATS-friendly resume snapshot
+- `PROJECT_AUDIT_2026-03-15.md` - latest repository audit and priorities
 
 ## Local Development
 
@@ -30,39 +30,17 @@ python3 -m http.server 8080
 
 Open `http://localhost:8080`.
 
-### Next.js Portfolio
-
-```bash
-cd next-portfolio
-npm install
-npm run dev
-```
-
-Open `http://localhost:3000`.
-
 ## Validation
 
 ### Static Files
 
 Check `index.html`, `js/main.js`, and metadata files in the editor for errors.
 
-### Next.js App
-
-```bash
-cd next-portfolio
-npm run lint
-npm run build
-```
-
 ## Deployment
 
 ### Static Site Deployment
 
 The root site is intended for GitHub Pages deployment from the main branch.
-
-### Next.js Deployment
-
-The Next.js version is production-ready and can be deployed separately if needed.
 
 ## Content Rules
 
@@ -74,5 +52,4 @@ The Next.js version is production-ready and can be deployed separately if needed
 ## Maintenance
 
 - Optimize images before adding new ones.
-- Do not commit generated folders such as `next-portfolio/.next/` or `next-portfolio/node_modules/`.
 - Keep the ATS resume updated with the latest verified experience.

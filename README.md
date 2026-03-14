@@ -13,7 +13,6 @@ Production-ready personal portfolio website for Shahul Hameed, positioned for Te
 - CSS3
 - Vanilla JavaScript
 - Static hosting on GitHub Pages
-- Optional Next.js version in `next-portfolio/`
 
 ## Project Structure
 
@@ -26,6 +25,7 @@ Production-ready personal portfolio website for Shahul Hameed, positioned for Te
 - `robots.txt`, `sitemap.xml`, `site.webmanifest` - SEO/PWA metadata
 - `CNAME` - custom domain mapping for GitHub Pages
 - `PROJECT_GUIDE.md` - single operational project reference
+- `PROJECT_AUDIT_2026-03-15.md` - latest full project audit snapshot
 
 ## Positioning
 
