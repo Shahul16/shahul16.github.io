@@ -1,15 +1,9 @@
-# OS files
 .DS_Store
 Thumbs.db
-
-# Editor
 .vscode/
-*.swp
-
-# Node (if ever needed)
 node_modules/
 .env
-
-# Build artifacts
 dist/
 .next/
+*.swp
+*.log
