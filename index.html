@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NGJ7S6G41B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NGJ7S6G41B');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Shahul Hameed — IT Business Analyst | UAE</title>
+<meta name="description" content="IT Business Analyst bridging Computer Science and business strategy in the UAE. CS graduate, MBA in Systems & Operations. SAP, ERP/CRM, M365, Power BI, Python."/>
+<meta name="keywords" content="Technology Business Analyst UAE, Business Analyst Dubai, Digital Transformation UAE, SAP ERP analyst, IT infrastructure UAE"/>
+<meta property="og:title" content="Shahul Hameed — IT Business Analyst"/>
+<meta property="og:description" content="I turn complex systems into measurable operational outcomes. UAE-based. CS + MBA."/>
+<meta property="og:url" content="https://shahulhameed.site"/>
+<meta property="og:image" content="https://shahulhameed.site/images/about-photo.jpg"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Shahul Hameed — IT Business Analyst | UAE"/>
+<meta name="twitter:description" content="CS + MBA. SAP, ERP/CRM, M365, Power BI, Python. IT Business Analyst in the UAE."/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="canonical" href="https://shahulhameed.site"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shahul Hameed",
+  "jobTitle": "IT Business Analyst",
+  "description": "Technology Business Analyst bridging Computer Science and business strategy in the UAE.",
+  "url": "https://shahulhameed.site",
+  "address": {"@type": "PostalAddress", "addressCountry": "AE", "addressRegion": "Dubai"},
+  "sameAs": ["https://linkedin.com/in/shahulhameed16","https://github.com/Shahul16"],
+  "alumniOf": [
+    {"@type": "EducationalOrganization", "name": "Sathyabama Institute of Science & Technology"},
+    {"@type": "EducationalOrganization", "name": "RDB College of Arts & Science"}
+  ]
+}
+</script>
+<style>
+/* ═══════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════ */
+:root{
+  --bg:        #0a0a09;
+  --bg2:       #111110;
+  --bg3:       #181816;
+  --surface:   #1e1e1b;
+  --border:    rgba(255,255,255,0.07);
+  --border2:   rgba(255,255,255,0.12);
+  --text:      #e8e6df;
+  --text2:     #9e9b91;
+  --text3:     #5c5a54;
+  --gold:      #c9a84c;
+  --gold2:     #e8c97a;
+  --gold-dim:  rgba(201,168,76,0.15);
+  --red:       #c84b3b;
+  --ok:       #4ade80;
+  --err:      #c84b3b;
+  --serif:     'Cormorant Garamond', Georgia, serif;
+  --sans:      'Outfit', system-ui, sans-serif;
+  --ease:      cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;scroll-padding-top:70px}
+body{
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ── GRAIN OVERLAY ── */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:1000;
+  opacity:0.4;
+}
+
+/* ═══════════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  height:60px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5vw;
+  border-bottom:1px solid var(--border);
+  background:rgba(10,10,9,0.88);
+  backdrop-filter:blur(16px);
+  transition:height .2s ease-out, background .2s ease-out;
+}
+nav.scrolled{height:48px;background:rgba(10,10,9,0.96)}
+.nav-logo{
+  font-family:var(--serif);
+  font-size:1.15rem;
+  font-weight:300;
+  color:var(--text);
+  text-decoration:none;
+  letter-spacing:0.02em;
+}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{
+  font-size:0.75rem;font-weight:400;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--text3);text-decoration:none;
+  transition:color 0.2s;
+  position:relative;
+}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{
+  font-size:0.75rem;font-weight:500;
+  letter-spacing:0.06em;
+  padding:0.5rem 1.25rem;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  border-radius:2px;
+  text-decoration:none;
+  transition:all 0.2s;
+}
+.nav-cta:hover{background:var(--gold);color:var(--bg)}
+
+/* ═══════════════════════════════════════
+   HERO  —  Start With Why + StoryBrand
+═══════════════════════════════════════ */
+#hero{
+  min-height:100vh;
+  padding:120px 5vw 80px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5rem;
+  align-items:center;
+  position:relative;
+}
+/* Decorative gold line */
+#hero::after{
+  content:'';
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:3px;
+  background:linear-gradient(to bottom,transparent,var(--gold),transparent);
+  opacity:0.4;
+}
+.hero-overline{
+  display:flex;align-items:center;gap:0.75rem;
+  font-size:0.7rem;font-weight:400;
+  letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:1.75rem;
+}
+.hero-overline::before{
+  content:'';
+  width:32px;height:1px;
+  background:var(--gold);
+}
+.hero-h1{
+  font-family:var(--serif);
+  font-size:clamp(2.8rem,5vw,4.4rem);
+  font-weight:300;
+  line-height:1.1;
+  letter-spacing:-0.01em;
+  margin-bottom:1.75rem;
+}
+.hero-h1 em{
+  font-style:italic;
+  color:var(--gold);
+}
+.hero-h1 strong{
+  font-weight:600;
+}
+.hero-sub{
+  font-size:1rem;
+  color:var(--text2);
+  max-width:440px;
+  line-height:1.8;
+  margin-bottom:2.5rem;
+}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-gold{
+  padding:0.8rem 2rem;
+  background:var(--gold);
+  color:var(--bg);
+  font-size:0.8rem;font-weight:500;
+  letter-spacing:0.06em;text-transform:uppercase;
+  border-radius:2px;
+  text-decoration:none;
+  transition:all 0.2s;
+}
+.btn-gold:hover{background:var(--gold2)}
+.btn-outline{
+  padding:0.8rem 2rem;
+  border:1px solid var(--border2);
+  color:var(--text2);
+  font-size:0.8rem;font-weight:400;
+  letter-spacing:0.06em;text-transform:uppercase;
+  border-radius:2px;
+  text-decoration:none;
+  transition:all 0.2s;
+}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+
+/* WHY CARD — Start With Why */
+.why-card{
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-left:3px solid var(--gold);
+  border-radius:4px;
+  padding:2.5rem;
+  position:relative;
+}
+.why-eyebrow{
+  font-size:0.65rem;font-weight:500;
+  letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:1.25rem;
+}
+.why-quote{
+  font-family:var(--serif);
+  font-size:1.3rem;font-weight:300;
+  font-style:italic;
+  line-height:1.65;
+  color:var(--text);
+  margin-bottom:2rem;
+}
+.why-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--border);
+}
+.stat-num{
+  font-family:var(--serif);
+  font-size:2rem;font-weight:300;
+  color:var(--gold);
+  line-height:1;
+}
+.stat-lbl{
+  font-size:0.72rem;color:var(--text3);
+  margin-top:0.3rem;line-height:1.4;
+}
+
+/* ═══════════════════════════════════════
+   SINGULARITY STRIP — Law of Singularity
+═══════════════════════════════════════ */
+#singularity{
+  background:var(--gold);
+  padding:22px 5vw;
+  display:flex;
+  align-items:center;
+  gap:3rem;
+  overflow:hidden;
+}
+.sing-label{
+  font-size:0.65rem;font-weight:500;
+  letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--bg);
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.sing-divider{width:1px;height:28px;background:rgba(0,0,0,0.2);flex-shrink:0}
+.sing-text{
+  font-family:var(--serif);
+  font-size:1.05rem;font-weight:400;
+  color:var(--bg);
+  font-style:italic;
+}
+
+/* ═══════════════════════════════════════
+   SECTIONS — SHARED
+═══════════════════════════════════════ */
+section{padding:96px 5vw}
+.sec-over{
+  font-size:0.65rem;font-weight:500;
+  letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.6rem;
+}
+.sec-h2{
+  font-family:var(--serif);
+  font-size:clamp(2rem,3.5vw,3rem);
+  font-weight:300;
+  line-height:1.15;
+  letter-spacing:-0.01em;
+  margin-bottom:1rem;
+}
+.sec-lead{
+  color:var(--text2);
+  max-width:540px;
+  font-size:0.9375rem;
+  line-height:1.8;
+  margin-bottom:3rem;
+}
+.gold-rule{
+  width:48px;height:1px;
+  background:var(--gold);
+  margin-bottom:3rem;
+  transform-origin:left;transform:scaleX(0);
+  transition:transform .8s cubic-bezier(.22,1,.36,1) .15s;
+}
+.gold-rule.in{transform:scaleX(1)}
+
+/* ═══════════════════════════════════════
+   SHELL FEATURE — Cialdini: Authority
+═══════════════════════════════════════ */
+#shell-feature{
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.shell-wrap{
+  display:grid;
+  grid-template-columns:1fr 2px 1fr;
+  gap:4rem;
+  align-items:center;
+  max-width:1000px;
+}
+.shell-left .badge{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  font-size:0.65rem;font-weight:500;
+  letter-spacing:0.12em;text-transform:uppercase;
+  background:var(--gold-dim);
+  border:1px solid rgba(201,168,76,0.3);
+  color:var(--gold);
+  padding:0.4rem 0.8rem;
+  border-radius:2px;
+  margin-bottom:1.25rem;
+}
+.shell-left h3{
+  font-family:var(--serif);
+  font-size:clamp(1.6rem,2.5vw,2.2rem);
+  font-weight:300;
+  margin-bottom:1rem;
+  line-height:1.2;
+}
+.shell-left p{
+  color:var(--text2);
+  font-size:0.9rem;
+  line-height:1.8;
+  margin-bottom:1.5rem;
+  max-width:400px;
+}
+.shell-metrics{display:flex;gap:2.5rem;flex-wrap:wrap}
+.s-metric .n{
+  font-family:var(--serif);
+  font-size:1.6rem;font-weight:300;
+  color:var(--gold);
+}
+.s-metric .l{
+  font-size:0.72rem;color:var(--text3);
+  margin-top:0.2rem;
+}
+.shell-vdiv{background:var(--border)}
+.shell-right{
+  display:flex;flex-direction:column;gap:1.25rem;
+}
+.shell-point{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:1rem;
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:3px;
+}
+.shell-point-icon{
+  font-size:1.1rem;flex-shrink:0;
+  width:32px;height:32px;
+  display:flex;align-items:center;justify-content:center;
+}
+.shell-point-text{
+  font-size:0.85rem;color:var(--text2);line-height:1.6;
+}
+.shell-point-text strong{color:var(--text);font-weight:500}
+
+/* ═══════════════════════════════════════
+   PROJECTS — Show Your Work
+═══════════════════════════════════════ */
+#projects{background:var(--bg)}
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:4px;
+  overflow:hidden;
+}
+.proj-card{
+  background:var(--bg);
+  padding:2rem;
+  text-decoration:none;
+  color:inherit;
+  display:block;
+  transition:background 0.2s;
+  position:relative;
+}
+.proj-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:var(--gold);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform 0.3s var(--ease);
+}
+.proj-card:hover{background:var(--bg3)}
+.proj-card:hover::before{transform:scaleX(1)}
+.proj-type{
+  font-size:0.65rem;font-weight:500;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--text3);
+  margin-bottom:1rem;
+  display:flex;align-items:center;gap:0.5rem;
+}
+.proj-type::before{content:'';width:14px;height:1px;background:var(--text3)}
+.proj-h3{
+  font-family:var(--serif);
+  font-size:1.15rem;font-weight:400;
+  line-height:1.35;
+  margin-bottom:0.75rem;
+  color:var(--text);
+}
+.proj-desc{
+  font-size:0.82rem;color:var(--text2);
+  line-height:1.7;margin-bottom:1.25rem;
+}
+.proj-result{
+  font-size:0.78rem;color:var(--gold);
+  font-weight:500;
+  display:flex;align-items:center;gap:0.4rem;
+}
+.proj-result::before{content:'→'}
+.proj-stack{
+  margin-top:1rem;
+  display:flex;gap:0.35rem;flex-wrap:wrap;
+}
+.tag{
+  font-size:0.65rem;
+  padding:0.2rem 0.55rem;
+  border:1px solid var(--border);
+  border-radius:2px;
+  color:var(--text3);
+}
+
+/* ═══════════════════════════════════════
+   EXPERIENCE — Lean Startup: Metrics
+═══════════════════════════════════════ */
+#experience{background:var(--bg2)}
+.exp-grid{
+  display:grid;
+  grid-template-columns:200px 1fr;
+  gap:0 4rem;
+  max-width:900px;
+}
+.exp-aside{
+  padding-top:4px;
+  position:relative;
+}
+.exp-aside::after{
+  content:'';
+  position:absolute;
+  right:0;top:0;bottom:0;
+  width:1px;
+  background:var(--border);
+}
+.exp-date{
+  font-size:0.75rem;
+  color:var(--text3);
+  line-height:1.5;
+  text-align:right;
+  padding-right:1.5rem;
+}
+.exp-company{
+  font-size:0.8rem;font-weight:500;
+  color:var(--text2);
+  margin-top:0.3rem;
+  text-align:right;
+  padding-right:1.5rem;
+}
+.exp-badge-pill{
+  display:inline-block;
+  font-size:0.6rem;font-weight:500;
+  letter-spacing:0.08em;text-transform:uppercase;
+  padding:0.2rem 0.55rem;
+  background:var(--gold-dim);
+  border:1px solid rgba(201,168,76,0.3);
+  color:var(--gold);
+  border-radius:2px;
+  margin-top:0.5rem;
+  float:right;
+  margin-right:1.5rem;
+}
+.exp-content{
+  padding-left:1.5rem;
+  padding-bottom:3.5rem;
+  border-left:1px solid var(--border);
+  position:relative;
+}
+.exp-content::before{
+  content:'';
+  position:absolute;
+  left:-5px;top:6px;
+  width:9px;height:9px;
+  border-radius:50%;
+  background:var(--bg2);
+  border:2px solid var(--gold);
+}
+.exp-role{
+  font-family:var(--serif);
+  font-size:1.15rem;font-weight:400;
+  margin-bottom:0.75rem;
+  color:var(--text);
+}
+.exp-bullets{list-style:none}
+.exp-bullets li{
+  font-size:0.85rem;color:var(--text2);
+  line-height:1.7;
+  padding-left:1.1rem;
+  position:relative;
+  margin-bottom:0.35rem;
+}
+.exp-bullets li::before{
+  content:'—';
+  position:absolute;left:0;
+  color:var(--text3);
+}
+.exp-bullets li strong{color:var(--text);font-weight:500}
+.exp-metrics-row{
+  display:flex;gap:2rem;flex-wrap:wrap;
+  margin-top:1.25rem;
+  padding-top:1.25rem;
+  border-top:1px dashed var(--border);
+}
+.em-item .n{
+  font-family:var(--serif);
+  font-size:1.4rem;font-weight:300;
+  color:var(--gold);line-height:1;
+}
+.em-item .l{
+  font-size:0.7rem;color:var(--text3);margin-top:0.2rem;
+}
+
+/* ═══════════════════════════════════════
+   STACK SECTION
+═══════════════════════════════════════ */
+#stack{background:var(--bg)}
+.stack-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:4px;
+  overflow:hidden;
+}
+.stack-group{
+  background:var(--bg);
+  padding:1.75rem 2rem;
+}
+.sg-label{
+  font-size:0.65rem;font-weight:500;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:1rem;
+}
+.sg-items{display:flex;flex-wrap:wrap;gap:0.4rem}
+.sg-item{
+  font-size:0.78rem;
+  padding:0.3rem 0.65rem;
+  border:1px solid var(--border);
+  border-radius:2px;
+  color:var(--text2);
+  background:var(--bg2);
+  transition:border-color 0.2s,color 0.2s;
+}
+.sg-item:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ═══════════════════════════════════════
+   PROOF — Cialdini: Social Proof
+═══════════════════════════════════════ */
+#proof{
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+}
+.proof-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:4px;
+  overflow:hidden;
+  margin-bottom:2rem;
+}
+.proof-card{
+  background:var(--bg2);
+  padding:1.75rem;
+  transition:background 0.2s;
+}
+.proof-card:hover{background:var(--bg3)}
+.proof-ico{
+  font-size:1.3rem;
+  margin-bottom:1rem;
+}
+.proof-title{
+  font-family:var(--serif);
+  font-size:1rem;font-weight:400;
+  color:var(--text);
+  margin-bottom:0.5rem;
+}
+.proof-desc{
+  font-size:0.78rem;color:var(--text2);
+  line-height:1.6;
+}
+.certs-row{
+  display:flex;gap:0.5rem;flex-wrap:wrap;
+}
+.cert{
+  font-size:0.72rem;
+  padding:0.35rem 0.75rem;
+  border:1px solid var(--border);
+  border-radius:2px;
+  color:var(--text3);
+  transition:border-color 0.2s,color 0.2s;
+}
+.cert:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ═══════════════════════════════════════
+   ABOUT — StoryBrand Guide
+═══════════════════════════════════════ */
+#about{background:var(--bg)}
+.about-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6rem;
+  align-items:start;
+}
+.about-bio{
+  font-size:0.9375rem;
+  color:var(--text2);
+  line-height:1.85;
+  margin-bottom:1.5rem;
+}
+.about-principle{
+  padding:1.5rem;
+  border:1px solid var(--border);
+  border-left:3px solid var(--gold);
+  background:var(--bg2);
+  border-radius:3px;
+  font-family:var(--serif);
+  font-size:1.05rem;font-weight:300;
+  font-style:italic;
+  color:var(--text);
+  line-height:1.65;
+  margin-bottom:2rem;
+}
+.edu-list{display:flex;flex-direction:column;gap:0}
+.edu-item{
+  padding:1.25rem 0;
+  border-bottom:1px solid var(--border);
+}
+.edu-item:last-child{border-bottom:none}
+.edu-deg{
+  font-family:var(--serif);
+  font-size:1rem;font-weight:400;
+  color:var(--text);
+  margin-bottom:0.2rem;
+}
+.edu-inst{font-size:0.83rem;color:var(--text2)}
+.edu-detail{font-size:0.75rem;color:var(--text3);margin-top:0.2rem}
+
+/* ═══════════════════════════════════════
+   KNOWN SECTION — Mark Schaefer
+═══════════════════════════════════════ */
+#known{
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+}
+.known-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5rem;
+  align-items:center;
+}
+.known-left .big-text{
+  font-family:var(--serif);
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:300;
+  line-height:1.3;
+  margin-bottom:1.5rem;
+}
+.known-left .big-text em{
+  font-style:italic;color:var(--gold);
+}
+.known-left p{
+  font-size:0.9rem;color:var(--text2);
+  line-height:1.8;margin-bottom:1rem;
+}
+.known-pillars{
+  display:flex;flex-direction:column;gap:0.75rem;
+}
+.known-pillar{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:1rem 1.25rem;
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:3px;
+  transition:border-color 0.2s;
+}
+.known-pillar:hover{border-color:var(--gold)}
+.kp-num{
+  font-family:var(--serif);
+  font-size:1.1rem;font-weight:300;
+  color:var(--gold);
+  min-width:24px;
+}
+.kp-content .title{
+  font-size:0.85rem;font-weight:500;
+  color:var(--text);margin-bottom:0.2rem;
+}
+.kp-content .desc{
+  font-size:0.78rem;color:var(--text2);line-height:1.5;
+}
+
+/* ═══════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════ */
+#contact{background:var(--bg)}
+.contact-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6rem;
+  align-items:start;
+}
+.contact-h2{
+  font-family:var(--serif);
+  font-size:clamp(1.8rem,3vw,2.8rem);
+  font-weight:300;
+  line-height:1.2;
+  margin-bottom:1rem;
+}
+.contact-sub{
+  font-size:0.9rem;color:var(--text2);
+  line-height:1.8;margin-bottom:2rem;
+}
+.contact-links{display:flex;flex-direction:column;gap:0.6rem}
+.c-link{
+  display:flex;align-items:center;gap:0.9rem;
+  text-decoration:none;
+  padding:0.75rem 1rem;
+  border:1px solid var(--border);
+  border-radius:3px;
+  color:var(--text2);
+  font-size:0.875rem;
+  transition:all 0.2s;
+}
+.c-link:hover{border-color:var(--gold);color:var(--gold)}
+.c-link-icon{
+  width:30px;height:30px;
+  border:1px solid var(--border);
+  border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.75rem;
+  flex-shrink:0;
+  color:var(--text3);
+}
+.contact-right{
+  padding:2.5rem;
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:4px;
+}
+.contact-book-quote{
+  font-family:var(--serif);
+  font-size:1.1rem;font-weight:300;
+  font-style:italic;
+  color:var(--text);
+  line-height:1.7;
+  margin-bottom:1rem;
+}
+.contact-attribution{
+  font-size:0.75rem;color:var(--text3);
+  margin-bottom:1.75rem;
+}
+.open-signal{
+  display:flex;align-items:center;gap:0.5rem;
+  font-size:0.8rem;color:var(--gold);font-weight:400;
+}
+.open-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--gold);
+  animation:glow 2s ease-in-out infinite;
+}
+@keyframes glow{
+  0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(201,168,76,0.4)}
+  50%{opacity:0.6;box-shadow:0 0 0 6px rgba(201,168,76,0)}
+}
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+footer{
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+  padding:1.75rem 5vw;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:0.75rem;
+  color:var(--text3);
+}
+footer a{color:var(--text3);text-decoration:none;transition:color 0.2s}
+footer a:hover{color:var(--gold)}
+
+/* ═══════════════════════════════════════
+   SCROLL ANIMATIONS
+═══════════════════════════════════════ */
+.reveal{
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity 0.7s var(--ease),transform 0.7s var(--ease);
+}
+.reveal.in{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media(max-width:1024px){
+  #hero{grid-template-columns:1fr;gap:3rem;padding-top:110px}
+  .why-card{max-width:560px}
+  .shell-wrap{grid-template-columns:1fr;gap:3rem}
+  .shell-vdiv{display:none}
+  .about-inner,.contact-inner,.known-inner{grid-template-columns:1fr;gap:3rem}
+  .proof-grid{grid-template-columns:1fr 1fr}
+  .stack-grid{grid-template-columns:1fr 1fr}
+  .projects-grid{grid-template-columns:1fr 1fr}
+  .exp-grid{grid-template-columns:1fr;gap:0}
+  .exp-aside{text-align:left;padding:0 0 0.25rem 1.5rem}
+  .exp-date,.exp-company{text-align:left;padding-right:0}
+  .exp-badge-pill{float:none;margin-right:0}
+  .exp-aside::after{display:none}
+  .nav-links{display:none}
+}
+@media(max-width:768px){
+  #hero{padding-top:100px}
+  .hero-h1{font-size:2.4rem}
+  .exp-grid{grid-template-columns:1fr}
+  .exp-aside{padding:0 0 0.25rem 1.5rem;text-align:left}
+  .exp-date,.exp-company{text-align:left;padding-right:0}
+  .exp-badge-pill{float:none;margin-right:0}
+  .exp-aside::after{display:none}
+  .projects-grid{grid-template-columns:1fr 1fr}
+  .proof-grid{grid-template-columns:1fr 1fr}
+  .stack-grid{grid-template-columns:1fr 1fr}
+  .why-stats{grid-template-columns:1fr 1fr 1fr}
+}
+@media(max-width:600px){
+  .projects-grid,.proof-grid,.stack-grid{grid-template-columns:1fr}
+  #singularity{flex-direction:column;gap:1rem}
+  .why-stats{grid-template-columns:1fr 1fr}
+  .hero-ctas{flex-direction:column}
+  .btn-gold,.btn-outline{text-align:center}
+  .shell-metrics{flex-direction:column;gap:1rem}
+  .exp-metrics-row{gap:1rem}
+  footer{flex-direction:column;gap:0.75rem;text-align:center}
+}
+
+/* ── MOBILE HAMBURGER ── */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;cursor:pointer;background:none;border:none;padding:4px}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--text2);transition:all 0.3s var(--ease);border-radius:1px}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(10,10,9,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:1.5rem 5vw 2rem;z-index:499;flex-direction:column;gap:0}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-size:1rem;font-weight:300;color:var(--text2);text-decoration:none;padding:0.875rem 0;border-bottom:1px solid var(--border);letter-spacing:0.04em;transition:color 0.2s}
+.nav-mobile a:last-child{border-bottom:none;padding-top:1.25rem;color:var(--gold)}
+.nav-mobile a:hover{color:var(--gold)}
+@media(max-width:1024px){.nav-hamburger{display:flex}}
+
+/* ── Lead form (token-native) ── */
+#lead-form{background:var(--bg3);border:1px solid var(--border);padding:1.5rem;margin-bottom:1.5rem}
+.lf-title{font-family:var(--serif);font-size:1.4rem;color:var(--text);margin-bottom:1rem}
+.lf-label{display:block;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text2);margin:0.8rem 0 0.3rem}
+.lf-input{width:100%;background:var(--bg2);border:1px solid var(--border2);color:var(--text);padding:0.7rem 0.9rem;font-family:inherit;font-size:0.95rem;box-sizing:border-box}
+.lf-input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-dim)}
+.lf-input:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.lf-btn{margin-top:1.1rem;cursor:pointer;border:none;width:100%}
+.lf-btn[disabled]{opacity:0.6;cursor:wait}
+.lf-status{margin-top:0.7rem;font-size:0.85rem;color:var(--gold2);min-height:1.2em}
+.lf-status.ok{color:var(--ok)}
+.lf-status.err{color:var(--err)}
+/* ── WhatsApp floating button ── */
+
+/* ── Services ── */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--border);border:1px solid var(--border)}
+.svc-card{background:var(--bg2);padding:1.6rem;transition:background .25s ease,transform .25s ease}
+.svc-card:hover{background:var(--bg3);transform:translateY(-3px)}
+.svc-h3{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--text);margin-bottom:0.5rem}
+.svc-desc{font-size:0.9rem;color:var(--text2);line-height:1.55;margin-bottom:0.7rem}
+.svc-roles{font-size:0.78rem;color:var(--gold);letter-spacing:0.02em}
+/* ── Follow icons ── */
+.follow-row{display:flex;gap:0.8rem;align-items:center}
+.follow-ic{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border2);color:var(--text2);transition:color .2s,border-color .2s,transform .2s;cursor:pointer}
+.follow-ic:hover{color:var(--gold2);border-color:var(--gold);transform:translateY(-2px)}
+.follow-ic:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
+/* ── Agent feed ── */
+.agent-feed{background:var(--bg3);border:1px solid var(--border);margin-top:1.4rem;max-width:430px}
+.af-head{display:flex;align-items:center;gap:0.5rem;padding:0.7rem 1rem;border-bottom:1px solid var(--border);font-size:0.82rem;color:var(--text2);letter-spacing:0.04em}
+.af-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px rgba(74,222,128,0.6)}
+.af-live{margin-left:auto;font-size:0.7rem;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em}
+.af-msgs{padding:1rem;display:flex;flex-direction:column;gap:0.6rem;min-height:150px;max-height:260px;overflow-y:auto}
+.af-msg{background:var(--surface);border:1px solid var(--border);padding:0.6rem 0.85rem;font-size:0.86rem;color:var(--text);line-height:1.5;max-width:92%;animation:afIn .3s ease}
+@keyframes afIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.af-typing{display:inline-flex;gap:4px;padding:0.6rem 0.85rem}
+.af-typing span{width:6px;height:6px;border-radius:50%;background:var(--text3);animation:afB 1s infinite}
+.af-typing span:nth-child(2){animation-delay:.15s}.af-typing span:nth-child(3){animation-delay:.3s}
+@keyframes afB{0%,60%,100%{opacity:.3}30%{opacity:1}}
+.af-chips{display:flex;flex-wrap:wrap;gap:0.5rem;padding:0 1rem 1rem}
+.af-chip{border:1px solid var(--border2);background:transparent;color:var(--gold2);font-size:0.78rem;padding:0.45rem 0.8rem;cursor:pointer;transition:background .2s,color .2s;font-family:inherit}
+.af-chip:hover{background:var(--gold-dim)}
+.af-chip:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){.af-msg{animation:none}.af-typing span{animation:none;opacity:.6}.follow-ic:hover{transform:none}}
+
+
+/* ── Assistant FAB + panel ── */
+.asst-fab{position:fixed;right:1.25rem;bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));z-index:999;width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--bg);border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,0.5);cursor:pointer;transition:transform .2s ease,background .2s ease}
+.asst-fab:hover{transform:scale(1.07);background:var(--gold2)}
+.asst-fab:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.asst-fab[aria-expanded="true"]{background:var(--gold2)}
+.asst-fab.pulse::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--gold);animation:fabPulse 2s ease-out 3;pointer-events:none}
+@keyframes fabPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.55);opacity:0}}
+.asst-panel{position:fixed;right:1.25rem;bottom:calc(5.6rem + env(safe-area-inset-bottom,0px));z-index:998;width:min(360px,calc(100vw - 2rem));background:var(--bg2);border:1px solid var(--border2);box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+.asst-panel .af-msgs{min-height:120px;max-height:min(300px,45vh)}
+.asst-close{margin-left:0.5rem;background:none;border:none;color:var(--text2);font-size:1.1rem;cursor:pointer;padding:0.2rem 0.4rem;line-height:1}
+.asst-close:hover{color:var(--gold2)}
+.asst-close:focus-visible{outline:2px solid var(--gold2)}
+.af-chip.af-wa svg{vertical-align:-3px;margin-right:5px}
+/* ── Skip link (Krug) ── */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--bg);padding:0.6rem 1rem;z-index:1000;font-size:0.85rem}
+.skip-link:focus{left:0.5rem;top:0.5rem}
+/* ── Form microcopy ── */
+.lf-note{margin-top:0.5rem;font-size:0.75rem;color:var(--text3)}
+@media (prefers-reduced-motion: reduce){.asst-fab{transition:none}.asst-fab:hover{transform:none}}
+
+
+/* ── Scroll progress (top hairline) ── */
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:1001;background:transparent;pointer-events:none}
+.scroll-progress span{display:block;height:100%;background:var(--gold);transform-origin:left;transform:scaleX(0)}
+/* ── Assistant transparency note ── */
+.af-note{padding:0 1rem 0.7rem;font-size:0.68rem;color:var(--text3);letter-spacing:0.04em}
+@media (prefers-reduced-motion: reduce){
+  .gold-rule{transform:none;transition:none}
+  .nav-links a::after{transition:none}
+  .svc-card{transition:none}.svc-card:hover{transform:none}
+  .asst-fab.pulse::before{animation:none;display:none}
+  .scroll-progress{display:none}
+}
+
+
+/* ── Accenture-feel layer ── */
+.cta-arr{display:inline-block;transition:transform .2s ease-out}
+.btn-gold:hover .cta-arr,.btn-outline:hover .cta-arr{transform:translateX(4px)}
+.btn-outline:hover .cta-arr{transform:translateY(3px)}
+#hero{position:relative}
+#hero::before{content:"";position:absolute;inset:-10% -10% auto auto;width:60vw;height:60vh;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse at 70% 30%, rgba(201,168,76,0.05), transparent 60%);
+  animation:heroDrift 26s ease-in-out infinite alternate}
+#hero > *{position:relative;z-index:1}
+@keyframes heroDrift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-4%,3%,0) scale(1.06)}}
+@media (prefers-reduced-motion: reduce){
+  nav{transition:none}
+  .cta-arr{transition:none}
+  #hero::before{animation:none}
+}
+
+
+/* ── Chat refinement ── */
+.af-row{display:flex;gap:0.55rem;align-items:flex-end;max-width:100%}
+.af-ava{flex:0 0 24px;width:24px;height:24px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);font-family:var(--serif);font-size:0.8rem;display:flex;align-items:center;justify-content:center;background:var(--bg2)}
+.af-msg.user{align-self:flex-end;background:var(--gold-dim);border-color:rgba(201,168,76,0.35);color:var(--gold2)}
+/* ── Press feedback ── */
+.btn-gold:active,.btn-outline:active,.af-chip:active,.lf-btn:active,.follow-ic:active{transform:scale(0.97)}
+/* ── Frosted assistant panel ── */
+.asst-panel{background:rgba(17,17,16,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+/* ── Icon sizing ── */
+.proof-ico svg,.shell-point-icon svg{color:var(--gold);display:block}
+/* ── Contrast fixes (AA) ── */
+.lf-note,.af-note{color:var(--text2)}
+@media (prefers-reduced-motion: reduce){
+  .btn-gold:active,.btn-outline:active,.af-chip:active,.lf-btn:active,.follow-ic:active{transform:none}
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#projects">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="spBar"></span></div>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="#">Shahul <span>Hameed</span></a>
+  <ul class="nav-links">
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#proof">Credentials</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Let's Talk</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="nav-mobile" id="mobileNav">
+  <a href="#projects" onclick="closeMobile()">Work</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#experience" onclick="closeMobile()">Experience</a>
+  <a href="#stack" onclick="closeMobile()">Stack</a>
+  <a href="#proof" onclick="closeMobile()">Credentials</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-overline reveal">UAE · IT Business Analyst</div>
+    <h1 class="hero-h1 reveal reveal-delay-1">
+      I turn <em>complex systems</em><br/>
+      into <strong>measurable</strong><br/>
+      outcomes.
+    </h1>
+    <p class="hero-sub reveal reveal-delay-2">
+      I help UAE businesses close the gap between their systems and their
+      strategy — M365, ERP/CRM, networks, and analytics that produce measured
+      outcomes. CS graduate. MBA in Systems &amp; Operations.
+    </p>
+    <div class="hero-ctas reveal reveal-delay-3">
+      <a class="btn-gold" href="#projects">See the work <span class="cta-arr" aria-hidden="true">→</span></a>
+      <a class="btn-outline" href="https://docs.google.com/document/d/1-Jw_K-ZoJWsJhgptxRir8N8AZyiRSFi_0PZXfQXInpU/export?format=pdf" target="_blank" rel="noopener noreferrer">Download CV <span class="cta-arr" aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+
+  <!-- Start With Why card -->
+  <div class="why-card reveal reveal-delay-2">
+    <div class="why-eyebrow">My why — Start With Why</div>
+    <p class="why-quote">
+      "Most organizations have great people and great technology —
+      but the gap between them is where efficiency dies.
+      I exist to close that gap."
+    </p>
+    <div class="why-stats">
+      <div>
+        <div class="stat-num" data-count="98" data-suffix="%">98%</div>
+        <div class="stat-lbl">Order accuracy achieved at GMG (Trilogi Logistics)</div>
+      </div>
+      <div>
+        <div class="stat-num" data-count="30" data-suffix="%">30%</div>
+        <div class="stat-lbl">Operational error reduction across live systems</div>
+      </div>
+      <div>
+        <div class="stat-num" data-count="50" data-suffix="+">50+</div>
+        <div class="stat-lbl">Users trained on SAP S/4HANA workflows</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SINGULARITY STRIP ── -->
+<div id="singularity">
+  <span class="sing-label">My singular position</span>
+  <div class="sing-divider"></div>
+  <p class="sing-text">
+    The analyst who actually knows what happens inside the systems — not just the PowerPoints about them.
+  </p>
+</div>
+
+<!-- ── SHELL FEATURE — Authority signal ── -->
+<section id="shell-feature">
+  <div class="shell-wrap reveal">
+    <div class="shell-left">
+      <div class="badge">Virtual Internship · Skills4Future</div>
+      <h3>AI &amp; Data Analytics — Green Skills<br/>Edunet Foundation · AICTE · Shell</h3>
+      <p>
+        Completed a four-week virtual internship under the Skills4Future
+        program (Edunet Foundation, in collaboration with AICTE and Shell).
+        Built an NLP chatbot for sustainability queries end-to-end and
+        completed guided data-modeling project work under industry-expert review.
+      </p>
+      <div class="shell-metrics">
+        <div class="s-metric">
+          <div class="n">70%</div>
+          <div class="l">NLP chatbot accuracy</div>
+        </div>
+        <div class="s-metric">
+          <div class="n">4 wks</div>
+          <div class="l">Structured program</div>
+        </div>
+        <div class="s-metric">
+          <div class="n">1</div>
+          <div class="l">End-to-end AI project delivered</div>
+        </div>
+      </div>
+    </div>
+    <div class="shell-vdiv"></div>
+    <div class="shell-right">
+      <div class="shell-point">
+        <div class="shell-point-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a4 4 0 0 0-4 4 4 4 0 0 0-3 6.5A4 4 0 0 0 8 20h1"/><path d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1 3 6.5A4 4 0 0 1 16 20h-1"/><path d="M12 2v20"/></svg></div>
+        <div class="shell-point-text"><strong>AI & NLP</strong> — Built an NLP chatbot for sustainability queries using Python and machine-learning pipelines.</div>
+      </div>
+      <div class="shell-point">
+        <div class="shell-point-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 17V9"/><path d="M13 17V5"/><path d="M18 17v-6"/></svg></div>
+        <div class="shell-point-text"><strong>Data Modeling</strong> — Data preparation and model exploration for AI-driven environmental problem statements.</div>
+      </div>
+      <div class="shell-point">
+        <div class="shell-point-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-7 7-9 4 2 7 5 7 9a7 7 0 0 1-7 7z"/><path d="M11 20V10"/></svg></div>
+        <div class="shell-point-text"><strong>Green Skills</strong> — Applied AI and analytics to real-world environmental problem statements.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS — Show Your Work ── -->
+<section id="projects">
+  <div class="sec-over reveal">Selected Work</div>
+  <h2 class="sec-h2 reveal">Systems built.<br/>Problems solved.<br/>Results documented.</h2>
+  <div class="gold-rule reveal"></div>
+
+  <div class="projects-grid reveal">
+
+    <a class="proj-card" href="https://github.com/Shahul16/Nawins-Website" target="_blank" rel="noopener noreferrer">
+      <div class="proj-type">Digital Transformation · Independent Project</div>
+      <h3 class="proj-h3">Nawins Overseas — End-to-End Digital Delivery</h3>
+      <p class="proj-desc">Complete digital foundation for an overseas-education consultancy: React website, domain &amp; hosting architecture (Hostinger, Cloudflare), Google Workspace rollout, HubSpot CRM pipeline for student-lead management, and brand setup.</p>
+      <div class="proj-result">From zero digital presence to a working lead-capture system</div>
+      <div class="proj-stack">
+        <span class="tag">React</span><span class="tag">HubSpot CRM</span><span class="tag">Google Workspace</span><span class="tag">Cloudflare</span>
+      </div>
+    </a>
+
+    <a class="proj-card" href="#contact">
+      <div class="proj-type">Security &amp; Workforce Systems · Enterprise</div>
+      <h3 class="proj-h3">AI Workforce Management — Major EPC Joint Venture</h3>
+      <p class="proj-desc">Designed the security and workforce-tracking architecture for a large engineering JV's Dubai operations: Hikvision CCTV with cloud VMS, face-recognition attendance, visitor management, and SAP integration planning across multiple sites.</p>
+      <div class="proj-result">Unified attendance, visitor &amp; site-security stack across locations</div>
+      <div class="proj-stack">
+        <span class="tag">Hikvision</span><span class="tag">Cloud VMS</span><span class="tag">Access Control</span><span class="tag">SAP planning</span>
+      </div>
+    </a>
+
+    <a class="proj-card" href="#contact">
+      <div class="proj-type">Network Infrastructure · Corporate Office</div>
+      <h3 class="proj-h3">Full-Floor Office Network Redesign</h3>
+      <p class="proj-desc">Redesigned Wi-Fi and switching for a 300+ user corporate floor: RF heatmap survey, 25 access points, PoE switching (Omada), Aruba Instant On, Ruijie Cloud management, VLAN segmentation, testing and handover documentation.</p>
+      <div class="proj-result">Stable full-floor coverage replacing an unreliable legacy network</div>
+      <div class="proj-stack">
+        <span class="tag">Aruba Instant On</span><span class="tag">Omada PoE</span><span class="tag">Ruijie Cloud</span><span class="tag">VLANs</span>
+      </div>
+    </a>
+
+    <a class="proj-card" href="#contact">
+      <div class="proj-type">Product Delivery · F&amp;B</div>
+      <h3 class="proj-h3">NFC Smart Menu System</h3>
+      <p class="proj-desc">Architected and delivered an NFC-based digital menu for a caf&eacute; group: NTAG213 tag selection and programming, URL/QR fallback, vendor sourcing and cost analysis, technical + commercial proposal, and installation methodology.</p>
+      <div class="proj-result">Contactless menu live in-store · repeatable product offering created</div>
+      <div class="proj-stack">
+        <span class="tag">NFC · NTAG213</span><span class="tag">Solution design</span><span class="tag">Vendor management</span>
+      </div>
+    </a>
+
+    <a class="proj-card" href="https://shahulhameed.site" target="_blank" rel="noopener noreferrer">
+      <div class="proj-type">Web · This Site</div>
+      <h3 class="proj-h3">This Portfolio</h3>
+      <p class="proj-desc">Designed and deployed from scratch — custom domain, PWA manifest, SEO metadata, GA4 analytics, HubSpot lead capture, WhatsApp integration. Pure HTML/CSS/JS, no frameworks.</p>
+      <div class="proj-result">Live at shahulhameed.site — production grade</div>
+      <div class="proj-stack">
+        <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JS</span><span class="tag">PWA</span>
+      </div>
+    </a>
+
+    <a class="proj-card" href="https://github.com/Shahul16" target="_blank" rel="noopener noreferrer">
+      <div class="proj-type">Research · MBA 2025</div>
+      <h3 class="proj-h3">AI in Education — MBA Research</h3>
+      <p class="proj-desc">Surveyed 150 institutions on AI adoption in education. Identified key barriers and proposed structured AI integration and ethical implementation frameworks.</p>
+      <div class="proj-result">78% adoption found · Frameworks proposed</div>
+      <div class="proj-stack">
+        <span class="tag">Research</span><span class="tag">AI Strategy</span><span class="tag">Data Analysis</span>
+      </div>
+    </a>
+
+    <a class="proj-card" href="https://github.com/Shahul16/Opinion-Spam-Detection" target="_blank" rel="noopener noreferrer">
+      <div class="proj-type">ML · B.Sc Final Year</div>
+      <h3 class="proj-h3">Opinion Spam Detection</h3>
+      <p class="proj-desc">Built a scalable ML solution in VB.NET/C#/SQL Server for detecting opinion spam using machine learning and network analysis techniques.</p>
+      <div class="proj-result">25% improvement in spam detection accuracy</div>
+      <div class="proj-stack">
+        <span class="tag">ML</span><span class="tag">VB.NET</span><span class="tag">SQL Server</span><span class="tag">Network Analysis</span>
+      </div>
+    </a>
+
+    <a class="proj-card" href="https://docs.google.com/document/d/1-Jw_K-ZoJWsJhgptxRir8N8AZyiRSFi_0PZXfQXInpU/export?format=pdf" target="_blank" rel="noopener noreferrer">
+      <div class="proj-type">Entrepreneurship · MBA 2024</div>
+      <h3 class="proj-h3">Grand Millennium Venture</h3>
+      <p class="proj-desc">Co-led restaurant startup simulation — built full business plan, MVP prototype, and go-to-market strategy. Conducted 100+ customer interviews, built financial model.</p>
+      <div class="proj-result">₹8.5M capital model · 25% projected ROI</div>
+      <div class="proj-stack">
+        <span class="tag">Business Planning</span><span class="tag">Financial Modeling</span><span class="tag">GTM Strategy</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ── SERVICES ── -->
+<section id="services">
+  <div class="sec-over reveal">What I Deliver</div>
+  <h2 class="sec-h2 reveal">Capabilities built<br/>on delivered work.</h2>
+  <div class="gold-rule reveal"></div>
+
+  <div class="svc-grid reveal">
+    <div class="svc-card">
+      <h3 class="svc-h3">Microsoft 365 &amp; Modern Workplace</h3>
+      <p class="svc-desc">Tenant design and administration — Exchange Online, Entra ID, Intune, security policies, licensing strategy, and user lifecycle management for business operations.</p>
+      <div class="svc-roles">Solution architecture · Tenant administration · Licensing · Security configuration</div>
+    </div>
+    <div class="svc-card">
+      <h3 class="svc-h3">Enterprise Infrastructure &amp; Networking</h3>
+      <p class="svc-desc">Design, deployment, and troubleshooting of wired and wireless networks, storage, routers, switches, firewalls, DNS, VPN, and endpoint connectivity.</p>
+      <div class="svc-roles">Infrastructure planning · Network administration · Performance optimization · Incident resolution</div>
+    </div>
+    <div class="svc-card">
+      <h3 class="svc-h3">CCTV &amp; Physical Security</h3>
+      <p class="svc-desc">Surveillance and access-control deployments — site assessment, camera layouts, storage estimation, and system integration using Hikvision and UNV platforms.</p>
+      <div class="svc-roles">Site assessment · Solution design · Storage planning · Deployment support</div>
+    </div>
+    <div class="svc-card">
+      <h3 class="svc-h3">Business Process &amp; Digital Transformation</h3>
+      <p class="svc-desc">Evaluating business processes and recommending scalable digital solutions across Microsoft 365, ERP, CRM, workforce management, and automation platforms.</p>
+      <div class="svc-roles">Business analysis · Requirements gathering · Solution design · Client consulting</div>
+    </div>
+    <div class="svc-card">
+      <h3 class="svc-h3">Web Platforms &amp; Business Websites</h3>
+      <p class="svc-desc">Design, development, and maintenance of business websites — performance, security, SEO, hosting, and DNS. Delivered: shahulhameed.site, Smart InfiniTech, Nawins Overseas Education.</p>
+      <div class="svc-roles">WordPress · Hosting &amp; DNS · Security · Performance</div>
+    </div>
+    <div class="svc-card">
+      <h3 class="svc-h3">Workforce Management Solutions</h3>
+      <p class="svc-desc">Scalable workforce management architecture — attendance, AI facial recognition, access control, and reporting — proposed and specified for multi-hundred-employee organizations.</p>
+      <div class="svc-roles">Requirements analysis · Product evaluation · Solution architecture · Proposal development</div>
+    </div>
+    <div class="svc-card">
+      <h3 class="svc-h3">Technical Documentation &amp; Solution Design</h3>
+      <p class="svc-desc">Professional documentation supporting deployments and sales — technical proposals, BRDs, implementation plans, SOPs, quotations, and user guides.</p>
+      <div class="svc-roles">Technical proposals · Solution architecture · SOPs · Implementation plans</div>
+    </div>
+    <div class="svc-card">
+      <h3 class="svc-h3">Infrastructure Support &amp; Recovery</h3>
+      <p class="svc-desc">Structured troubleshooting and recovery for production systems — including enterprise storage (Dell PowerVault) diagnostics, root cause analysis, and vendor coordination.</p>
+      <div class="svc-roles">Root cause analysis · Recovery planning · Vendor coordination · Technical support</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="sec-over reveal">Experience</div>
+  <h2 class="sec-h2 reveal">Every role.<br/>Every metric.</h2>
+  <div class="gold-rule reveal"></div>
+
+  <div class="exp-grid">
+
+    <!-- Smart Infinitech Current -->
+    <div class="exp-aside reveal">
+      <div class="exp-date">Sep 2025 – Present</div>
+      <div class="exp-company">Smart Infinitech<br/>Dubai, UAE</div>
+      <span class="exp-badge-pill">Current</span>
+    </div>
+    <div class="exp-content reveal">
+      <div class="exp-role">IT Business Analyst</div>
+      <ul class="exp-bullets">
+        <li>Deliver <strong>IT systems &amp; business analysis across 13+ client engagements</strong> — requirements gathering, solution design, implementation, and documentation across Windows, M365, and Entra ID environments</li>
+        <li>Configure and maintain <strong>ERP and CRM systems (Odoo, Zoho, HubSpot)</strong> for business clients — workflow setup, UAT, and release testing</li>
+        <li>Implement system automation using <strong>Python and Excel</strong>, improving reporting efficiency by <strong>30%</strong></li>
+        <li>Support <strong>AWS and Google Cloud</strong> infrastructure for uptime monitoring and backup operations</li>
+      </ul>
+    </div>
+
+    <!-- Trilogi -->
+    <div class="exp-aside reveal">
+      <div class="exp-date">Mar – Sep 2025</div>
+      <div class="exp-company">Trilogi Logistics<br/>GMG Group · Dubai</div>
+    </div>
+    <div class="exp-content reveal">
+      <div class="exp-role">Team Lead — Warehouse Tech & Operations</div>
+      <ul class="exp-bullets">
+        <li>Supervised logistics operations supported by <strong>WMS systems</strong> and IT-based reporting</li>
+        <li>Improved <strong>data accuracy and dispatch reliability</strong> through process automation and analytics</li>
+        <li>Coordinated with IT support for real-time issue resolution and device integration</li>
+        <li>Reduced order processing time by <strong>12%</strong>, improved order accuracy to <strong>98%</strong>, errors down <strong>30%</strong></li>
+      </ul>
+      <div class="exp-metrics-row">
+        <div class="em-item"><div class="n">98%</div><div class="l">order accuracy</div></div>
+        <div class="em-item"><div class="n">30%</div><div class="l">fewer errors</div></div>
+        <div class="em-item"><div class="n">25%</div><div class="l">productivity gain</div></div>
+        <div class="em-item"><div class="n">50+</div><div class="l">users trained</div></div>
+      </div>
+    </div>
+
+    <!-- Shell -->
+    <div class="exp-aside reveal">
+      <div class="exp-date">Dec 2024 – Jan 2025</div>
+      <div class="exp-company">Skills4Future Program<br/>Edunet Foundation · AICTE · Shell</div>
+    </div>
+    <div class="exp-content reveal">
+      <div class="exp-role">Virtual Intern — AI &amp; Data Analytics (Green Skills)</div>
+      <ul class="exp-bullets">
+        <li>Built an <strong>NLP chatbot</strong> for sustainability queries achieving <strong>~70% response accuracy</strong></li>
+        <li>Completed guided <strong>data-modeling project work</strong> under industry-expert review</li>
+        <li>Four-week structured virtual program with weekly mentorship sessions</li>
+      </ul>
+    </div>
+
+    <!-- Vodafone Idea -->
+    <div class="exp-aside reveal">
+      <div class="exp-date">Oct – Nov 2024</div>
+      <div class="exp-company">Vodafone Idea Foundation<br/>Virtual Internship · India</div>
+    </div>
+    <div class="exp-content reveal">
+      <div class="exp-role">Data Analytics Intern</div>
+      <ul class="exp-bullets">
+        <li>Analyzed superstore sales data using <strong>Python, Pandas, Seaborn</strong> for inventory optimization</li>
+        <li>Implemented predictive analytics for healthcare resource allocation using AI/ML models</li>
+      </ul>
+    </div>
+
+    <!-- Nandha InfoTech -->
+    <div class="exp-aside reveal">
+      <div class="exp-date">Jan 2023</div>
+      <div class="exp-company">Nandha InfoTech<br/>Coimbatore, India</div>
+    </div>
+    <div class="exp-content reveal">
+      <div class="exp-role">Project Intern — AI & Machine Learning</div>
+      <ul class="exp-bullets">
+        <li>Developed AI models using <strong>ML, Deep Learning, and CNN</strong> for face recognition and disease prediction</li>
+        <li>Built dual-domain AI model achieving <strong>95% accuracy</strong> — cotton leaf disease and heart disease prediction</li>
+        <li>Implemented real-time <strong>Face Recognition</strong> system using OpenCV</li>
+        <li>Optimized model accuracy above <strong>85%</strong> through algorithm enhancements and data preprocessing</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── STACK ── -->
+<section id="stack">
+  <div class="sec-over reveal">Technology Stack</div>
+  <h2 class="sec-h2 reveal">Tools I use<br/>to get things done.</h2>
+  <div class="gold-rule reveal"></div>
+
+  <div class="stack-grid reveal">
+    <div class="stack-group">
+      <div class="sg-label">Cloud &amp; Modern Workplace</div>
+      <div class="sg-items">
+        <span class="sg-item">Microsoft 365</span><span class="sg-item">Entra ID</span><span class="sg-item">Exchange Online</span><span class="sg-item">Intune</span><span class="sg-item">Teams</span><span class="sg-item">SharePoint Online</span><span class="sg-item">Google Workspace</span><span class="sg-item">AWS</span><span class="sg-item">Google Cloud</span><span class="sg-item">Azure Fundamentals</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <div class="sg-label">Infrastructure &amp; Systems</div>
+      <div class="sg-items">
+        <span class="sg-item">Windows Server</span><span class="sg-item">Active Directory</span><span class="sg-item">DNS · DHCP · GPO</span><span class="sg-item">Dell PowerVault</span><span class="sg-item">Backup &amp; DR</span><span class="sg-item">Linux</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <div class="sg-label">Networking</div>
+      <div class="sg-items">
+        <span class="sg-item">TCP/IP</span><span class="sg-item">VLANs</span><span class="sg-item">VPN</span><span class="sg-item">Aruba Instant On</span><span class="sg-item">Omada</span><span class="sg-item">Ruijie Cloud</span><span class="sg-item">Wireless Infrastructure</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <div class="sg-label">Security &amp; Surveillance</div>
+      <div class="sg-items">
+        <span class="sg-item">Microsoft Defender</span><span class="sg-item">MFA</span><span class="sg-item">Conditional Access</span><span class="sg-item">Hikvision</span><span class="sg-item">UNV</span><span class="sg-item">Dahua · CP Plus</span><span class="sg-item">Access Control</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <div class="sg-label">Business Applications</div>
+      <div class="sg-items">
+        <span class="sg-item">SAP S/4HANA</span><span class="sg-item">Odoo ERP</span><span class="sg-item">HubSpot CRM</span><span class="sg-item">Zoho CRM</span><span class="sg-item">WMS</span><span class="sg-item">POS Solutions</span><span class="sg-item">ServiceNow</span><span class="sg-item">Jira</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <div class="sg-label">Data &amp; Analytics</div>
+      <div class="sg-items">
+        <span class="sg-item">Power BI</span><span class="sg-item">SQL</span><span class="sg-item">Excel</span><span class="sg-item">Python</span><span class="sg-item">Pandas</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <div class="sg-label">Web &amp; Digital</div>
+      <div class="sg-items">
+        <span class="sg-item">WordPress</span><span class="sg-item">Elementor</span><span class="sg-item">WooCommerce</span><span class="sg-item">Cloudflare</span><span class="sg-item">DNS Management</span><span class="sg-item">SSL</span><span class="sg-item">GitHub</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <div class="sg-label">AI &amp; Productivity</div>
+      <div class="sg-items">
+        <span class="sg-item">Microsoft Copilot</span><span class="sg-item">ChatGPT</span><span class="sg-item">Claude</span><span class="sg-item">Gemini</span><span class="sg-item">Prompt Engineering</span><span class="sg-item">Workflow Automation</span><span class="sg-item">AI-Assisted Documentation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PROOF — Cialdini ── -->
+<section id="proof">
+  <div class="sec-over reveal">Why Organizations Trust Me</div>
+  <h2 class="sec-h2 reveal">Credentials.<br/>Not claims.</h2>
+  <div class="gold-rule reveal"></div>
+
+  <div class="proof-grid reveal">
+    <div class="proof-card">
+      <div class="proof-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9 12 4 2 9l10 5 10-5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></svg></div>
+      <div class="proof-title">Dual Academic Foundation</div>
+      <div class="proof-desc">BSc Computer Science + MBA Systems & Operations Management. The rare combination that bridges technical execution and business strategy.</div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3 3.7-3.7z"/></svg></div>
+      <div class="proof-title">Field-Proven Delivery</div>
+      <div class="proof-desc">13+ client implementations delivered across the UAE — Microsoft 365 tenants, office networks, CCTV &amp; security systems, ERP/CRM platforms. On-site, in production.</div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg></div>
+      <div class="proof-title">Live Enterprise Systems</div>
+      <div class="proof-desc">Hands-on SAP S/4HANA, ERP/WMS operations, and M365 administration in production UAE environments — not labs or simulations.</div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 17V9"/><path d="M13 17V5"/><path d="M18 17v-6"/></svg></div>
+      <div class="proof-title">Every Number Tracked</div>
+      <div class="proof-desc">98% order accuracy. 30% error reduction. 25% productivity gain. 50+ users trained. Documented outcomes from real deployments, not estimates.</div>
+    </div>
+  </div>
+
+  <div class="certs-row reveal">
+    <span class="cert">Microsoft Applied Skills — Azure (2025)</span>
+    <span class="cert">One Million Prompters · Dubai Future Foundation</span>
+    <span class="cert">AWS Generative AI</span>
+    <span class="cert">Microsoft Copilot &amp; Applied AI</span>
+    <span class="cert">Foundations of Emerging Technologies</span>
+    <span class="cert">IBM IT Fundamentals</span>
+    <span class="cert">Cisco Cybersecurity Essentials</span>
+    <span class="cert">SQL Essentials Training</span>
+    <span class="cert">Project Management Essential (PMEC)</span>
+    <span class="cert">CSCMP Operations Professional</span>
+    <span class="cert">Wadhwani Self-Presentation Training</span>
+  </div>
+</section>
+
+<!-- ── KNOWN — Mark Schaefer ── -->
+<section id="known">
+  <div class="known-inner">
+    <div class="known-left reveal">
+      <div class="sec-over">Known For</div>
+      <div class="big-text">
+        In a world of generalists,<br/>
+        the specialist who <em>also</em><br/>
+        speaks business wins.
+      </div>
+      <p>Most IT professionals can't articulate a business case. Most business analysts can't configure a system. I do both — because I've lived on both sides.</p>
+      <p style="margin-top:0">This is the intersection the UAE market is looking for.</p>
+    </div>
+    <div class="known-pillars reveal">
+      <div class="known-pillar">
+        <div class="kp-num">01</div>
+        <div class="kp-content">
+          <div class="title">Systems Operator → Strategy Thinker</div>
+          <div class="desc">Started configuring systems. Now I ask why the system exists and whether it's solving the right problem.</div>
+        </div>
+      </div>
+      <div class="known-pillar">
+        <div class="kp-num">02</div>
+        <div class="kp-content">
+          <div class="title">CS + MBA: The Bridge Builder</div>
+          <div class="desc">Two degrees that most people treat as separate tracks. I treat them as one capability — technical delivery with business intent.</div>
+        </div>
+      </div>
+      <div class="known-pillar">
+        <div class="kp-num">03</div>
+        <div class="kp-content">
+          <div class="title">Measurable, Not Vague</div>
+          <div class="desc">Every project, every role — I track outcomes in numbers. This is the Lean Startup mindset applied to personal work.</div>
+        </div>
+      </div>
+      <div class="known-pillar">
+        <div class="kp-num">04</div>
+        <div class="kp-content">
+          <div class="title">UAE-Based · Right to Work</div>
+          <div class="desc">Active UAE residence visa. Delivering on-site across Dubai and Abu Dhabi client environments.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-left reveal">
+      <div class="sec-over">About</div>
+      <h2 class="sec-h2">The guide<br/>behind the work.</h2>
+      <div class="gold-rule"></div>
+      <p class="about-bio">
+        I started as a developer, moved into infrastructure, stepped into operations leadership at GMG's logistics arm, and completed a virtual AI &amp; data analytics internship through the Skills4Future program (Edunet Foundation with AICTE &amp; Shell). Each step wasn't a detour — it was building a rare, compound capability.
+      </p>
+      <p class="about-bio">
+        The MBA wasn't a pivot away from tech. It was the decision to take everything I knew technically and learn to deploy it in service of business outcomes. My MBA research surveyed 150 institutions on AI adoption — finding 78% utilization with significant untapped potential. My BSc final project built an ML model for opinion spam detection, improving accuracy by 25%.
+      </p>
+      <div class="about-principle">
+        "You don't rise to the level of your goals. You fall to the level of your systems."
+        <div style="font-size:0.75rem;color:var(--text3);margin-top:0.5rem;font-style:normal">— James Clear, Atomic Habits · Applied daily.</div>
+      </div>
+      <a class="btn-outline" href="https://docs.google.com/document/d/1-Jw_K-ZoJWsJhgptxRir8N8AZyiRSFi_0PZXfQXInpU/export?format=pdf" target="_blank" rel="noopener noreferrer" style="display:inline-block">Download Full CV →</a>
+    </div>
+    <div class="about-right reveal">
+      <div class="sec-over">Education</div>
+      <div class="gold-rule"></div>
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="edu-deg">MBA — Systems & Operations Management</div>
+          <div class="edu-inst">Sathyabama Institute of Science & Technology, Chennai</div>
+          <div class="edu-detail">Aug 2023 – Jul 2025 · CGPA 8.31/10</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-deg">BSc — Computer Science</div>
+          <div class="edu-inst">RDB College of Arts & Science, Thanjavur · Bharathidasan University</div>
+          <div class="edu-detail">Jul 2020 – Jun 2023 · CGPA 8.2/10</div>
+          <div class="edu-detail" style="margin-top:0.4rem;color:var(--text2)">Final Project: Opinion Spam Detection — ML model (VB.NET/C#/SQL) · <strong style="color:var(--gold)">25% accuracy improvement</strong></div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-deg">Languages</div>
+          <div class="edu-inst">English (Proficient) · Tamil (Native) · Malayalam · Hindi · Arabic (Basic)</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-deg">Follow</div>
+          <div class="edu-inst follow-row" style="margin-top:0.5rem">
+            <a class="follow-ic" href="https://github.com/Shahul16" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
+            <a class="follow-ic" href="https://linkedin.com/in/shahulhameed16" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-left reveal">
+      <h2 class="contact-h2">Open to the<br/>right opportunity.</h2>
+      <p class="contact-sub">
+        Targeting Technology Analyst, IT Business Analyst, and Digital Transformation roles in the UAE or remote-first environments. I reply within 24 hours.
+      </p>
+      <div class="agent-feed reveal" id="agentFeed" aria-label="Portfolio assistant">
+        <div class="af-head"><span class="af-dot"></span> Shahul's Assistant <span class="af-live">online</span></div>
+        <div class="af-msgs"></div>
+        <div class="af-chips"></div>
+      </div>
+      <div class="follow-row" style="margin-top:1.2rem">
+        <a class="follow-ic" href="https://github.com/Shahul16" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
+            <a class="follow-ic" href="https://linkedin.com/in/shahulhameed16" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+      </div>
+    </div>
+    <div class="contact-right reveal">
+      <form id="lead-form" novalidate>
+        <div class="lf-title">Send a message</div>
+        <label class="lf-label" for="lf-name">Name</label>
+        <input class="lf-input" id="lf-name" name="name" type="text" autocomplete="name" required/>
+        <label class="lf-label" for="lf-email">Email</label>
+        <input class="lf-input" id="lf-email" name="email" type="email" autocomplete="email" required/>
+        <label class="lf-label" for="lf-msg">Message</label>
+        <textarea class="lf-input" id="lf-msg" name="message" rows="4" required></textarea>
+        <button class="btn-gold lf-btn" type="submit" id="lf-submit">Send message</button>
+        <div class="lf-status" id="lf-status" role="status" aria-live="polite"></div>
+        <div class="lf-note">Typical reply time: under 24 hours.</div>
+      </form>
+      <p class="contact-book-quote">
+        "Your personal brand is what people say about you when you're not in the room. Make sure they're saying something specific."
+      </p>
+      <div class="contact-attribution">— Adapted from <em>KNOWN</em>, Mark W. Schaefer</div>
+      <div class="open-signal">
+        <div class="open-dot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span>© 2026 Shahul Hameed · IT Business Analyst · UAE</span>
+  <span>
+    <a href="https://shahulhameed.site">shahulhameed.site</a> ·
+    <a href="https://linkedin.com/in/shahulhameed16" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+    <a href="https://github.com/Shahul16" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </span>
+</footer>
+
+<script>
+// Scroll reveal
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+  });
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Trigger hero reveals immediately
+setTimeout(()=>{
+  document.querySelectorAll('#hero .reveal').forEach(el=>el.classList.add('in'));
+},100);
+
+// Active nav link on scroll
+const navLinks = document.querySelectorAll('.nav-links a');
+const sectionEls = document.querySelectorAll('section[id], div[id]');
+const navObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id = e.target.id;
+      navLinks.forEach(a=>{
+        a.style.color = a.getAttribute('href')==='#'+id ? 'var(--gold)' : '';
+      });
+    }
+  });
+},{threshold:0.4});
+sectionEls.forEach(s=>navObs.observe(s));
+
+// Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+</script>
+
+<!-- Assistant launcher + panel -->
+<div class="asst-panel" id="asstPanel" hidden>
+  <div class="af-head">
+    <span class="af-dot"></span> Shahul's Assistant <span class="af-live">online</span>
+    <button class="asst-close" id="asstClose" aria-label="Close assistant">&#215;</button>
+  </div>
+  <div class="af-msgs"></div>
+  <div class="af-chips"></div>
+  <div class="af-note">Instant answers · curated by Shahul</div>
+</div>
+<button class="asst-fab" id="asstFab" aria-label="Open Shahul's assistant" aria-expanded="false" aria-controls="asstPanel">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 2.16.9 4.14 2.4 5.67-.14 1.2-.62 2.62-1.63 3.72-.2.22-.05.58.25.56 2.06-.14 3.7-.86 4.86-1.6 1.27.43 2.66.66 4.12.66 5.52 0 10-3.94 10-8.8S17.52 2 12 2zm-4.5 9.9a1.1 1.1 0 1 1 0-2.2 1.1 1.1 0 0 1 0 2.2zm4.5 0a1.1 1.1 0 1 1 0-2.2 1.1 1.1 0 0 1 0 2.2zm4.5 0a1.1 1.1 0 1 1 0-2.2 1.1 1.1 0 0 1 0 2.2z"/></svg>
+</button>
+
+<!-- HubSpot tracking (portal 148848696) -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148848696.js"></script>
+
+<script>
+// ── Lead form → HubSpot Forms API (free CRM) ──
+const HS_PORTAL = "148848696";
+const HS_FORM_GUID = "d9007d02-d10d-47a6-b3e1-41444df8101c";
+document.getElementById('lead-form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const name = document.getElementById('lf-name').value.trim();
+  const email = document.getElementById('lf-email').value.trim();
+  const msg = document.getElementById('lf-msg').value.trim();
+  const status = document.getElementById('lf-status');
+  const btn = document.getElementById('lf-submit');
+  if(!name || !email || !msg){ status.className='lf-status err'; status.textContent = 'Please fill in all fields.'; return; }
+  btn.disabled = true; status.textContent = 'Sending…';
+  try{
+    const res = await fetch(`https://api-eu1.hsforms.com/submissions/v3/integration/submit/${HS_PORTAL}/${HS_FORM_GUID}`,{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        fields:[
+          {objectTypeId:'0-1', name:'firstname', value:name},
+          {objectTypeId:'0-1', name:'email', value:email},
+          {objectTypeId:'0-1', name:'message', value:msg}
+        ],
+        context:{ pageUri: location.href, pageName: document.title }
+      })
+    });
+    if(res.ok){
+      status.className='lf-status ok'; status.textContent = 'Message sent — I will reply within 24 hours. ✓';
+      this.reset();
+      if(typeof gtag === 'function') gtag('event','generate_lead',{method:'hubspot_form'});
+    } else {
+      const err = await res.json().catch(()=>({}));
+      status.className='lf-status err'; status.textContent = 'Could not send — please use the WhatsApp button instead.';
+      console.error('HubSpot form error', err);
+    }
+  }catch(ex){
+    status.className='lf-status err'; status.textContent = 'Network error — please use the WhatsApp button instead.';
+  }finally{ btn.disabled = false; }
+});
+
+
+// Shrinking header on scroll
+(function(){
+  const nav = document.querySelector('nav');
+  if(!nav) return;
+  let t=false;
+  function upd(){ nav.classList.toggle('scrolled', window.scrollY > 40); t=false; }
+  window.addEventListener('scroll',function(){ if(!t){ requestAnimationFrame(upd); t=true; } },{passive:true});
+  upd();
+})();
+
+// ── Minimal live animations (reduced-motion aware) ──
+(function(){
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Scroll progress
+  const bar = document.getElementById('spBar');
+  if(bar && !reduced){
+    let ticking=false;
+    function upd(){
+      const h = document.documentElement;
+      const p = h.scrollTop / (h.scrollHeight - h.clientHeight || 1);
+      bar.style.transform = 'scaleX(' + p + ')'; ticking=false;
+    }
+    window.addEventListener('scroll',function(){ if(!ticking){ requestAnimationFrame(upd); ticking=true; } },{passive:true});
+    upd();
+  }
+  // Stat count-up
+  const stats = document.querySelectorAll('.stat-num[data-count]');
+  if(stats.length){
+    const so = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        so.unobserve(e.target);
+        const el=e.target, end=parseInt(el.dataset.count,10), suf=el.dataset.suffix||'';
+        if(reduced){ el.textContent=end+suf; return; }
+        const t0=performance.now(), dur=1100;
+        (function tick(t){
+          const k=Math.min((t-t0)/dur,1), ease=1-Math.pow(1-k,3);
+          el.textContent=Math.round(end*ease)+suf;
+          if(k<1) requestAnimationFrame(tick);
+        })(t0);
+      });
+    },{threshold:0.6});
+    stats.forEach(function(s){ so.observe(s); });
+  }
+  // FAB attention pulse after 4s (once)
+  const fab=document.getElementById('asstFab');
+  if(fab && !reduced){
+    setTimeout(function(){ fab.classList.add('pulse');
+      setTimeout(function(){ fab.classList.remove('pulse'); }, 6500);
+    }, 4000);
+  }
+})();
+
+// ── Portfolio assistant (shared: contact feed + corner popup) ──
+(function(){
+  const WA_URL = 'https://wa.me/971589922059?text=Hi%20Shahul%2C%20I%20saw%20your%20portfolio%20%E2%80%94';
+  const QA = {
+    "What do you do?": "I'm an IT Business Analyst in Dubai — bridging business requirements and technical delivery across Microsoft 365, ERP/CRM systems, networking, and analytics. 13+ client implementations so far.",
+    "Recent projects": "Recent work: a 300+ user office network redesign (25 APs, RF heatmap survey), an AI workforce-management architecture for a major EPC joint venture, an NFC smart-menu product, and end-to-end digital delivery for an overseas-education consultancy.",
+    "Certifications": "Microsoft Applied Skills (Azure), Dubai Future Foundation One Million Prompters, AWS Generative AI, Cisco Cybersecurity Essentials, SQL Essentials, PMEC — AWS AI Practitioner in progress.",
+    "Background": "B.Sc. Computer Science + MBA in Systems & Operations Management. Previously led warehouse tech & operations at GMG (Trilogi Logistics) — 98% order accuracy, 30% error reduction, 50+ users trained."
+  };
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function initFeed(root, opts){
+    const msgs = root.querySelector('.af-msgs');
+    const chips = root.querySelector('.af-chips');
+    if(!msgs || !chips || msgs.dataset.init) return;
+    msgs.dataset.init = '1';
+    function addMsg(text, user){
+      if(user){
+        const d = document.createElement('div'); d.className='af-msg user'; d.textContent=text;
+        msgs.appendChild(d);
+      } else {
+        const row = document.createElement('div'); row.className='af-row';
+        row.innerHTML = '<span class="af-ava" aria-hidden="true">S</span>';
+        const d = document.createElement('div'); d.className='af-msg'; d.textContent=text;
+        row.appendChild(d); msgs.appendChild(row);
+      }
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+    function typeThen(text, cb){
+      if(reduced){ addMsg(text); if(cb)cb(); return; }
+      const t = document.createElement('div'); t.className='af-msg af-typing';
+      t.innerHTML='<span></span><span></span><span></span>';
+      msgs.appendChild(t); msgs.scrollTop = msgs.scrollHeight;
+      setTimeout(function(){ t.remove(); addMsg(text); if(cb)cb(); }, 650);
+    }
+    function buildChips(){
+      chips.innerHTML='';
+      Object.keys(QA).forEach(function(q){
+        const b=document.createElement('button'); b.type='button'; b.className='af-chip'; b.textContent=q;
+        b.addEventListener('click',function(){
+          addMsg(q, true); typeThen(QA[q]);
+          if(typeof gtag==='function') gtag('event','agent_question',{question:q});
+        });
+        chips.appendChild(b);
+      });
+      // WhatsApp handoff — only path that opens WhatsApp
+      const wa=document.createElement('button'); wa.type='button'; wa.className='af-chip af-wa';
+      wa.innerHTML='<svg viewBox="0 0 32 32" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.117.55 4.105 1.514 5.83L4 29l8.37-1.478A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3z"/></svg>Chat on WhatsApp \u2192';
+      wa.addEventListener('click',function(){
+        addMsg('Chat on WhatsApp', true);
+        typeThen('Opening WhatsApp \u2014 Shahul typically replies within 24 hours.',function(){
+          window.open(WA_URL,'_blank','noopener');
+        });
+        if(typeof gtag==='function') gtag('event','contact',{method:'whatsapp_assistant'});
+      });
+      chips.appendChild(wa);
+      if(opts && opts.formChip){
+        const talk=document.createElement('button'); talk.type='button'; talk.className='af-chip'; talk.textContent='Leave a message \u2192';
+        talk.addEventListener('click',function(){
+          typeThen('Drop your details in the form here \u2014 it goes straight to Shahul.',function(){
+            const f=document.getElementById('lf-name'); if(f) f.focus();
+          });
+        });
+        chips.appendChild(talk);
+      }
+    }
+    typeThen(opts && opts.greeting ? opts.greeting : "Hi \u2014 I'm Shahul's portfolio assistant. Ask me anything below.", buildChips);
+  }
+
+  // Contact-section feed: init when scrolled into view
+  const feedEl = document.getElementById('agentFeed');
+  if(feedEl){
+    const obs = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ obs.disconnect(); initFeed(feedEl,{formChip:true}); } });
+    },{threshold:0.3});
+    obs.observe(feedEl);
+  }
+
+  // Corner popup
+  const fab = document.getElementById('asstFab');
+  const panel = document.getElementById('asstPanel');
+  const closeBtn = document.getElementById('asstClose');
+  function setOpen(open){
+    if(open){
+      panel.hidden = false; fab.setAttribute('aria-expanded','true');
+      initFeed(panel,{greeting:"Hi \u2014 ask me about Shahul, or tap \u2018Chat on WhatsApp\u2019 to talk to him directly."});
+      if(typeof gtag==='function') gtag('event','assistant_open');
+    } else {
+      panel.hidden = true; fab.setAttribute('aria-expanded','false');
+    }
+  }
+  if(fab && panel){
+    fab.addEventListener('click',function(){ setOpen(panel.hidden); });
+    closeBtn.addEventListener('click',function(){ setOpen(false); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !panel.hidden) setOpen(false); });
+    document.addEventListener('click',function(e){
+      if(!panel.hidden && !panel.contains(e.target) && e.target!==fab && !fab.contains(e.target)) setOpen(false);
+    });
+  }
+})();
+
+// GA event on WhatsApp click
+document.querySelectorAll('a[href^="https://wa.me"]').forEach(a=>{
+  a.addEventListener('click',()=>{ if(typeof gtag==='function') gtag('event','contact',{method:'whatsapp'}); });
+});
+</script>
+</body>
+</html>
